@@ -66,6 +66,16 @@ permalink: /:title/
 compress_html:
   clippings: all
 
+jekyll_admin:
+  hidden_links:
+    - admin
+    - posts
+    - pages
+    - staticfiles
+    - datafiles
+    - configuration
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-admin
