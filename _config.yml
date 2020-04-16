@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-title: Jhuei好吃雞排 # your site title
+title: Jhuei Yummy Chicken Cutlet # your site title
 author: Jhuei # You :P
 description: > # Meta description of Homepage
   Write an awesome description for your new site here. You can edit this
@@ -26,7 +26,7 @@ navigation: # Navigation links
   - {name: 'Contact', link: '/contact'}
 
 tagline: >
-  想學炸雞排阿?教你啊!
+  Want to learn fried chicken? Teach you!
 
 hero_img: posts/banner.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
