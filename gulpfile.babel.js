@@ -33,7 +33,7 @@ const rename = require( "gulp-rename" );
 const imagemin = require( "gulp-imagemin" );
 
 const src = {
-  css: "_sass/jekyll-sleek.scss",
+  css: "_sass/jekyll-jhuei.scss",
   js: "_js/scripts.js"
 };
 const dist = {

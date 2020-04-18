@@ -3,7 +3,7 @@ title: Ckeditor + Htmlpurifier allow attribute
 layout: post
 featured-img: kerwin
 categories:
-- code
+- CODE
 tags:
 - htmlpurifier
 - ckeditor

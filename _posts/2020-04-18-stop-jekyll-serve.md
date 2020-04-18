@@ -1,5 +1,6 @@
 ---
 title: Stop Jekyll serve (127.0.0.1:4000)
+summary: Jekyll serve 無法關閉
 layout: post
 featured-img: 20200418
 categories:
@@ -18,5 +19,7 @@ tags:
 {:refdef: align="center" }
 ![cookie](https://i.imgur.com/hk0qGZQ.png)
 {: refdef}
+
+[如果你想了解更多](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle?hl=zh-tw)
 
 Hope it will help!
