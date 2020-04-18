@@ -1,6 +1,6 @@
 ---
 title: Stop Jekyll serve (127.0.0.1:4000)
-summary: 
+summary: Jekyll serve service worker
 layout: post
 featured-img: 20200418
 categories:
