@@ -27,10 +27,10 @@ navigation: # Navigation links
 
 tagline: >
   Want to learn fried chicken? Teach you!
-
+# Index banner
 hero_img: posts/banner.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
-#formspree
+#Formspree
 email: mvobleyb # email for form submission
 
 logo_size: 30px
@@ -38,7 +38,8 @@ logo_size: 30px
 twitter_username:  # replace with your_twitter_username or comment to remove link from footer
 github_username:   # replace with your_github_username or comment to remove link from footer
 instagram_username:  # replace with your_instagram_username or comment to remove link from footer
-
+# Comment
+comment: false #to enable comment
 disqus:
   shortname: jhuei # to enable comments replace with your_disqus_shortname
 
@@ -48,7 +49,7 @@ service_worker: true
 
 # BUILD SETTINGS
 markdown: kramdown
-highlighter: rouge # or pygments or null
+highlighter: rouge # or pygments or null or rouge
 # theme: jekyll-sleek # Uncomment if you're using the theme as a ruby gem
 exclude:
   - README.md
