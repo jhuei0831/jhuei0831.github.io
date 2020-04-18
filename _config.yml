@@ -33,7 +33,7 @@ tagline: >
   Want to learn fried chicken? Teach you!
 # Index banner
 hero_img: posts/banner.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
-background_img: posts/background.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
+background_img: posts/background.JPG # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
 #Formspree
 email: mvobleyb # email for form submission
