@@ -1,13 +1,14 @@
 # SITE CONFIGURATION
-title: Jhuei Yummy Fried Chicken # your site title
+title: Jhuei Yummy # your site title
 author: Jhuei # You :P
 description: > # Meta description of Homepage
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Share the coding problems and solution :)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jhuei.com" # the base hostname & protocol for your site, e.g. http://example.com
-
+image:
+  path: assets/img/icons/android-chrome-256x256.png
+  height: 256
+  width: 256
 #Language
 lang: zh-Hant-TW
 
@@ -27,6 +28,7 @@ navigation: # Navigation links
   - {name: 'Home', link: '/'}
   - {name: 'About', link: '/about'}
   - {name: 'Categories', link: '/categories'}
+  - {name: 'Search', link: '/search'}
   - {name: 'Contact', link: '/contact'}
 
 tagline: >
