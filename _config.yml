@@ -2,10 +2,13 @@
 title: Jhuei Yummy # your site title
 author: Jhuei # You :P
 description: > # Meta description of Homepage
-  Share coding issue and solutions ! 
+  Share the coding issues and solution :)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jhuei.com" # the base hostname & protocol for your site, e.g. http://example.com
-
+image:
+  path: assets/img/icons/android-chrome-256x256.png
+  height: 256
+  width: 256
 #Language
 lang: zh-Hant-TW
 
@@ -25,6 +28,7 @@ navigation: # Navigation links
   - {name: 'Home', link: '/'}
   - {name: 'About', link: '/about'}
   - {name: 'Categories', link: '/categories'}
+  - {name: 'Search', link: '/search'}
   - {name: 'Contact', link: '/contact'}
 
 tagline: >
