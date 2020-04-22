@@ -70,5 +70,5 @@ DB_PASSWORD=password
 [![laravel](https://i.imgur.com/vo0yJtw.png)](https://i.imgur.com/vo0yJtw.png){:target="_blank"}
 
 <div class="notice--success">
-🧡🧡  	貼心小提醒，記得版控ㄛ 🤪🤪
+❤❤  貼心小提醒，記得版控ㄛ ❤❤
 </div>

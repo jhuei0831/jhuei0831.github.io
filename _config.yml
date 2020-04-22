@@ -7,8 +7,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jhuei.com" # the base hostname & protocol for your site, e.g. http://example.com
 image:
   path: assets/img/icons/android-chrome-256x256.png
-  height: 256
-  width: 256
 #Language
 lang: zh-Hant-TW
 
@@ -93,4 +91,5 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-admin
+  - jemoji
   - wdm
