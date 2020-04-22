@@ -9,6 +9,7 @@ tags:
 - ckeditor
 - php
 - html
+summary: Allow the attribute as you want.
 ---
 
 I created a page manager in the backstage, and it edit by the ckeditor. Also, I use Htmlpurifier to defense the xss injection. But Htmlpurifier will block the attribute like Bootstrap tabs plugins. 
