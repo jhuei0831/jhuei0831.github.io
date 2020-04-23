@@ -53,7 +53,7 @@ disqus:
 
 google_tag_manager: GTM-M9CWRJT # Uncomment to enable GTM. Replace GTM-XXXXXXX with your GTM container ID
 
-service_worker: false
+service_worker: true
 excerpt_separator: <!--more-->
 
 # BUILD SETTINGS
