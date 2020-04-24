@@ -16,10 +16,12 @@ tags:
 ---
 
 ### 前言
+<hr> 
 
 前陣子開始接觸 Laravel ，算是第一個接觸的MVC框架 ，學了一段時間後就想做一個小品當作練習。這個練習的目的就是讓我熟悉 `Model`、`View`、`Controller` 三者之間的愛恨糾葛😂。不會講得很細，就是分享我遇到的問題以及解決的方法。
 
 ### 使用工具
+<hr> 
 
 
 |  工具 | Laravel | PHP | MySQL |
@@ -27,15 +29,19 @@ tags:
 | 版本    | 5.8     | 7.2     | 5.7     |
 
 ### 目標
+<hr> 
 
 完成一個後端控制前台發布文章、導覽列、消息、輪播、訊息的網站。
 
 ### 成品圖
+<hr> 
+
 [![fontend](https://i.imgur.com/pA0CUz0.png)](https://i.imgur.com/pA0CUz0.png){:target="_blank"}
 
 [![backend](https://i.imgur.com/GMe8NcD.png)](https://i.imgur.com/GMe8NcD.png){:target="_blank"}
 
 ### 設置
+<hr> 
 
 這次使用的是`5.8` 版本的Laravel ，所以先建立一個資料夾 `myweb` 。
 

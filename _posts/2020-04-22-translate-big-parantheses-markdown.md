@@ -12,9 +12,11 @@ summary: 如何在markdown中顯示雙大括號 - How to translate double big pa
 ---
 
 ### 前言
+<hr> 
 由於jekyll 使用liquid 的關係，在 POST 中使用 {% raw %} {{  }} {% endraw %} 會無法正常顯示。
 
 ### 解決
+<hr> 
 ```{% assign openTag = '{%' %}  
 {{ openTag }} raw %}      
 {% raw %}
