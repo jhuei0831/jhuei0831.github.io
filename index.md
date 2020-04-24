@@ -6,4 +6,6 @@
 #
 layout: default
 title: Jhuei Yummy
+pagination: 
+  enabled: true
 ---
