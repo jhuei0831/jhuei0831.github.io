@@ -52,9 +52,11 @@ a {
 }
 
 hr {
-  height: 1px;
-  background: $border;
-  border: 0;
+  height: 5px;
+  border: none;
+  background-color: transparent !important; /* 顏色透明 */
+  background-image: url(/assets/img/posts/hr.png);
+  background-repeat: repeat repeat-y; /* 圖片不重複 */
 }
 
 em {
