@@ -24,7 +24,7 @@ social:
 navigation: # Navigation links
   - {name: '<img src="\assets\img\icons\home.png" alt="HOME">', link: '/'}
   - {name: '<img src="\assets\img\icons\about.png" alt="ABOUT">', link: '/about'}
-  - {name: '<img src="\assets\img\icons\archives.png" alt="ARCHIVES">', link: '/Archives'}
+  - {name: '<img src="\assets\img\icons\archives.png" alt="ARCHIVES">', link: '/archives'}
   - {name: '<img src="\assets\img\icons\search.png" alt="SEARCH">', link: '/search'}
   - {name: '<img src="\assets\img\icons\contact.png" alt="CONTACT">', link: '/contact'}
 
