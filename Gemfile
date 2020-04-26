@@ -2,6 +2,7 @@
 
 source "https://rubygems.org"
 gem 'jemoji'
+gem 'jekyll-archives'
 gem 'jekyll-paginate-v2'
 gem 'jekyll-feed'
 gem 'jekyll-admin', group: :jekyll_plugins

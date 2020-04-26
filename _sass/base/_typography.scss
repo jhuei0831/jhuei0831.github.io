@@ -36,8 +36,6 @@ h6 {
 a {
   color: $link-color;
   text-decoration: none;
-  transition: all .2s linear;
-  border-bottom: 1px dashed $link-color;
 
   &:active,
   &:focus {
@@ -47,12 +45,11 @@ a {
   &:hover,
   &:focus {
     color: $primary-light;
-    border-bottom: 1px solid $primary-light;
   }
 }
 
 hr {
-  height: 5px;
+  height: 10px;
   border: none;
   background-color: transparent !important; /* 顏色透明 */
   background-image: url(/assets/img/posts/hr.png);

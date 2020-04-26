@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
  * Recommended to use import if you're building the site through gulp.
  * @import "node_modules/normalize.css/normalize";
@@ -532,9 +534,6 @@ h6 {
 a {
   color: #277cea;
   text-decoration: none;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
-  border-bottom: 1px dashed #277cea;
 }
 
 a:active,
@@ -545,20 +544,16 @@ a:focus {
 a:hover,
 a:focus {
   color: #68a4f1;
-  border-bottom: 1px solid #68a4f1;
 }
 
 hr {
-  height: 5px;
+  height: 10px;
   border: none;
-  background-color: transparent !important; /* 顏色透明 */
+  background-color: transparent !important;
+  /* 顏色透明 */
   background-image: url(/assets/img/posts/hr.png);
-  background-repeat: repeat repeat-y; /* 圖片不重複 */
-  /* border-bottom: 2px solid #d9d9d9;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  margin: 0.5em 0; */
+  background-repeat: repeat repeat-y;
+  /* 圖片不重複 */
 }
 
 em {
@@ -1144,6 +1139,36 @@ button:disabled :focus {
   color: #fff;
   background-color: #277cea;
   border: 2px solid #277cea;
+}
+
+.label_link {
+  padding: 0px 10px;
+  margin-bottom: 1rem;
+  display: inline-block;
+  line-height: 20px;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.label_link:focus,
+.label_link:hover {
+  color: #fff;
+  background-color: #d67f05;
+  border: 2px solid #d67f05;
+}
+
+.date-label {
+  border: 1px solid #f3f3f3;
+  padding: 0 0.2em;
+  margin-left: 1em;
+  margin-top: 2px;
+  float: right;
 }
 
 .pagination {

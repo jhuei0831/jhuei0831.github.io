@@ -22,10 +22,13 @@
         </a>
       {% endif %}
       {% if site.RSS %}
-        <a href="{{ site.url }}/feed.xml"><img width="16" height="16" src="{{ '/assets/img/icons/RSS.png' | relative_url }}"></a>
+        <a href="{{ site.url }}/feed.xml"><img width="16" height="16" src="{{ '/assets/img/icons/RSS.png' | relative_url }}"></a>&nbsp;&nbsp;
       {% endif %}
+        <a class="social__link" rel="noopener noreferrer" href="/logs">
+          <div class="icon"><img src="\assets\img\icons\logs.png" alt="LOGS"></div>
+        </a>
     </nav>
-    <span>&copy;2020 - {{ site.time | date: '%Y' }} {{ site.title | escape }}</span>
+    <span>&copy;2020 - {{ site.time | date: '%Y' }} {{ site.title | escape }}</a></span><br>
   </div>
 </footer>
 <script async src="{{ "/assets/js/bundle.js" | relative_url }}"></script>
