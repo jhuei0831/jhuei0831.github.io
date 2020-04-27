@@ -1,0 +1,16 @@
+<nav align="center" class="menu browse by-{{ include.taxonomy | slugify }} text-center" aria-label="{{ include.taxonomy }}">
+  <h2>Jump to:</h2>
+  {% for tag in include.items %}
+  <a class="label_link" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+  {% endfor %}
+</nav><hr>
+{% for tag in include.items %}
+<h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2><hr>
+<ul aria-label="posts classified under {{ tag[0] }}" style="list-style:none;text-align: left;">
+  {% for post in tag[1] %}
+  <li>
+    {% include post/post-list-item.html %}
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}

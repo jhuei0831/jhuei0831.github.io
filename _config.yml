@@ -8,7 +8,7 @@ url: "https://jhuei.com" # the base hostname & protocol for your site, e.g. http
 image: assets/img/icons/android-chrome-256x256.png
 #Language
 lang: zh-Hant-TW
-
+words_per_minute: 50
 # SEO PLUGIN
 social:
   name: jhuei
@@ -22,11 +22,11 @@ social:
 
 # THEME SETTINGS
 navigation: # Navigation links
-  - {name: 'Home', link: '/'}
-  - {name: 'About', link: '/about'}
-  - {name: 'Categories', link: '/categories'}
-  - {name: 'Search', link: '/search'}
-  - {name: 'Contact', link: '/contact'}
+  - {name: '<img src="\assets\img\icons\home.png" alt="HOME">', link: '/'}
+  - {name: '<img src="\assets\img\icons\about.png" alt="ABOUT">', link: '/about'}
+  - {name: '<img src="\assets\img\icons\archives.png" alt="ARCHIVES">', link: '/archives'}
+  - {name: '<img src="\assets\img\icons\search.png" alt="SEARCH">', link: '/search'}
+  - {name: '<img src="\assets\img\icons\contact.png" alt="CONTACT">', link: '/contact'}
 
 tagline: >
   Want to learn fried chicken? Teach you!
@@ -87,6 +87,26 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 
+jekyll-archives:
+  enabled: [all]
+  layout: page
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: '/page:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
 compress_html:
   clippings: all
 
@@ -100,6 +120,8 @@ jekyll_admin:
     # - configuration
 
 plugins:
+  - jekyll-archives
+  - jekyll-paginate-v2
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
