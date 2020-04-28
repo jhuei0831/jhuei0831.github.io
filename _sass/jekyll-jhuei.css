@@ -570,9 +570,9 @@ code {
   padding: 0.2em 0.4em;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 0.9rem;
-  color: #25292e;
-  background-color: #f6f8fa;
-  border-radius: 3px;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
 }
 
 pre {
@@ -581,9 +581,9 @@ pre {
   margin-bottom: 1rem;
   overflow-x: auto;
   font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  color: #25292e;
+  color: #c7254e;
   word-wrap: normal;
-  background-color: #f6f8fa;
+  background-color: #f9f2f4;
   border: solid 1px #dce6f0;
   border-radius: 0.3rem;
 }
@@ -592,7 +592,7 @@ pre > code {
   padding: 0;
   margin: 0;
   font-size: 0.9rem;
-  color: #25292e;
+  color: #c7254e;
   word-break: normal;
   white-space: pre;
   background: transparent;
