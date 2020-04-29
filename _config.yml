@@ -77,16 +77,6 @@ include: ['_pages']
 permalink: /:title/
 # permalink: /:year/:month/:title.html
 
-# Pagination Settings
-pagination:
-  enabled: true
-  per_page: 3
-  permalink: '/page/:num/'
-  title: ' - page :num'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
-
 jekyll-archives:
   enabled: [all]
   layout: page
