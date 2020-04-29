@@ -8,7 +8,7 @@ tags:
 - jekyll
 - liquid
 - markdown
-summary: 如何在markdown中顯示雙大括號 - How to translate double big parantheses in markdown
+description: 如何在markdown中顯示雙大括號 - How to translate double big parantheses in markdown
 ---
 
 ### 前言

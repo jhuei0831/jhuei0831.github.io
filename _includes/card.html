@@ -33,8 +33,8 @@
         <time>{{ post.date | date: date_format }}</time>
       </span>
     </div>
-    {% if post.summary %}
-      <p>{{ post.summary | strip_html | truncatewords:20 }}</p>
+    {% if post.description %}
+      <p>{{ post.description | strip_html | truncatewords:20 }}</p>
     {% else %}
       <p>{{ post.content | strip_html | truncatewords: 20 }}</p>
     {% endif %}

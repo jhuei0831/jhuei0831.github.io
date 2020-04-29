@@ -1,6 +1,6 @@
 ---
 title: Stop Jekyll serve (127.0.0.1:4000)
-summary: 解決Jekyll serve 無法關閉  - Jekyll serve service worker
+description: 解決Jekyll serve 無法關閉  - Jekyll serve service worker
 layout: post
 featured-img: 20200418
 categories:

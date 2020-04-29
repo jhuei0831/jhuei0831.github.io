@@ -11,7 +11,7 @@ tags:
 - css
 - bootstrap
 - backend
-summary: Laravel 會員管理 / CRUD - Laravel member system / CRUD
+description: Laravel 會員管理 / CRUD - Laravel member system / CRUD
 ---
 
 ### 前言
@@ -354,7 +354,7 @@ public function store(Request $request)
 
 ### 2. 會員修改
 ---
-萬事起頭難，接下來你會發現就是新增 `blade` 然後在 `contrller` 設定操作。
+萬事起頭難，接下來你會發現就是新增 `blade` 然後在 `controller` 設定操作。
 
 在 `controller` 的 `edit($id)` 加入 :
 ```php
