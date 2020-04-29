@@ -35,7 +35,7 @@ php artisan make:controller MemberController --resource
 指令成功之後可以在 `app/Http/controllers`底下看到剛剛建立的 `member.php`，並且裡面已經有基本的 CRUD function。
 
 接下來因為要加入權限的關係，要打開 `database/migrations/2014_10_12_000000_create_users_table.php`，並將其改成以下:
-```
+```php
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -79,7 +79,7 @@ php artisan migrate:fresh
 
 再來因為有了新的資料庫欄位，所以要在 `User.php` 中加入剛剛新增的欄位。
 
-```
+```php
 <?php
 
 namespace App;
@@ -171,43 +171,37 @@ Route::prefix('manage')->group(function(){
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ trans('Member').trans('Manage') }}</div>
+                <div class="card-header">{% raw %}{{ trans('Member').trans('Manage') }}{% endraw %}</div>
 
                 <div class="card-body">
                     <ul class="list-inline">
-                        <li class="list-inline-item">{{ App\Button::Create() }}</li>
+                        <li class="list-inline-item">{% raw %}{{ App\Button::Create() }}{% endraw %}</li>
                     </ul>
                     <div class="table-responsive">
                         <table id="data" class="table table-hover table-bordered text-center">
                             <thead>
                                 <tr class="table-info active">
-                                    <th class="text-nowrap text-center">{{ trans('Name') }}</th>
-                                    <th class="text-nowrap text-center">{{ trans('E-Mail Address') }}</th>
-                                    <th class="text-nowrap text-center" style="display:none">{{ trans('Permission') }}</th>
-                                    <th class="text-nowrap text-center">{{ trans('Permission') }}</th>
-                                    <th class="text-nowrap text-center">{{ trans('Action') }}</th>
+                                    <th class="text-nowrap text-center">{% raw %}{{ trans('Name') }}{% endraw %}</th>
+                                    <th class="text-nowrap text-center">{% raw %}{{ trans('E-Mail Address') }}{% endraw %}</th>
+                                    <th class="text-nowrap text-center">{% raw %}{{ trans('Permission') }}{% endraw %}</th>
+                                    <th class="text-nowrap text-center">{% raw %}{{ trans('Action') }}{% endraw %}</th>
                                 </tr>
                             </thead>
                             <tbody>
                             @foreach ($all_users as $user)
                                 <tr>
-                                    <td>{{ $user->name }}</td>
-                                    <td>{{ $user->email }}</td>
-                                    <td style="display:none">{{ $user->permission }}</td>
-                                    <td>{{App\Enum::permission[$user->permission]}}</td>
+                                    <td>{% raw %}{{ $user->name }}{% endraw %}</td>
+                                    <td>{% raw %}{{ $user->email }}{% endraw %}</td>
+                                    <td>{% raw %}{{App\Enum::permission[$user->permission]}}{% endraw %}</td>
                                     <td>
-                                        <form action="{{ route('member.edit',$user->id) }}" method="GET">
+                                        <form action="{% raw %}{{ route('member.edit',$user->id) }}{% endraw %}" method="GET">
                                         @csrf
-																				{% raw %}
-                                        {{ App\Button::edit($user->id) }}
-																				{% endraw %}
+                                        {% raw %}{{ App\Button::edit($user->id) }}{% endraw %}
                                         </form>
-                                        <form action="{{ route('member.destroy',$user->id) }}" method="POST">
+                                        <form action="{% raw %}{{ route('member.destroy',$user->id) }}{% endraw %}" method="POST">
                                         @method('DELETE')
                                         @csrf
-																				{% raw %}
-                  {% raw %}{{ App\Button::deleting($user->id) }}{% endraw %}
-																				
+                                        {% raw %}{{ App\Button::deleting($user->id) }}{% endraw %}
                                         </form>
                                     </td>
                                 </tr>
@@ -236,71 +230,71 @@ Route::prefix('manage')->group(function(){
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <form action="{{ route('member.store') }}" method="POST">
-                    <div class="card-header">{{ trans('Member').trans('Create') }}</div>
+                <form action="{% raw %}{{ route('member.store') }}{% endraw %}" method="POST">
+                    <div class="card-header">{% raw %}{{ trans('Member').trans('Create') }}{% endraw %}</div>
                     <div class="card-body">
                         <ul class="list-unstyled">
-                            <li>{{ App\Button::GoBack(route('member.index')) }}</li>
+                            <li>{% raw %}{{ App\Button::GoBack(route('member.index')) }}{% endraw %}</li>
                         </ul>
                         @csrf
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ trans('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Name') }}{% endraw %}</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" placeholder="{{ trans('Name') }}">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{% raw %}{{ old('name') }}{% endraw %}" placeholder="{% raw %}{{ trans('Name') }}{% endraw %}">
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{% raw %}{{ $message }}{% endraw %}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="content" class="col-md-4 col-form-label text-md-right">{{ trans('E-Mail Address') }}</label>
+                            <label for="content" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('E-Mail Address') }}{% endraw %}</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" placeholder="{{ trans('E-Mail Address') }}">
+                                <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{% raw %}{{ old('email') }}{% endraw %}" placeholder="{% raw %}{{ trans('E-Mail Address') }}{% endraw %}">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{% raw %}{{ $message }}{% endraw %}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="permission" class="col-md-4 col-form-label text-md-right">{{ trans('Permission') }}</label>
+                            <label for="permission" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Permission') }}{% endraw %}</label>
                             <div class="col-md-6">
-                                <select class="form-control @error('permission') is-invalid @enderror" id="permission" name='permission' required aria-describedby="typeHelp" value="{{ old('permission') }}" placeholder="{{ trans('Permission') }}">
-                                    <option value=''>{{ trans('Please choose')}}{{ trans('Permission')}}</option>
+                                <select class="form-control @error('permission') is-invalid @enderror" id="permission" name='permission' required aria-describedby="typeHelp" value="{% raw %}{{ old('permission') }}{% endraw %}" placeholder="{% raw %}{{ trans('Permission') }}{% endraw %}">
+                                    <option value=''>{% raw %}{{ trans('Please choose')}}{% endraw %}{% raw %}{{ trans('Permission')}}{% endraw %}</option>
                                     @foreach(App\Enum::permission as $key => $value)
-                                        <option value='{{ $key }}'>{{ $value }}</option>
+                                        <option value='{% raw %}{{ $key }}{% endraw %}'>{% raw %}{{ $value }}{% endraw %}</option>
                                     @endforeach
                                 </select>
                                 @error('permission')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{% raw %}{{ $message }}{% endraw %}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="content" class="col-md-4 col-form-label text-md-right">{{ trans('Password') }}</label>
+                            <label for="content" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Password') }}{% endraw %}</label>
                             <div class="col-md-6">
-                                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="{{ trans('Password') }}">
+                                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="{% raw %}{{ trans('Password') }}{% endraw %}">
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{% raw %}{{ $message }}{% endraw %}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="content" class="col-md-4 col-form-label text-md-right">{{ trans('Confirm Password') }}</label>
+                            <label for="content" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Confirm Password') }}{% endraw %}</label>
                             <div class="col-md-6">
-                                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="{{ trans('Confirm Password') }}">
+                                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="{% raw %}{{ trans('Confirm Password') }}{% endraw %}">
                             </div>
                         </div>
                     </div>
                     <div class="card-footer text-center">
-                        <input type="submit" class="btn btn-primary" value="{{ trans('Create') }}">
+                        <input type="submit" class="btn btn-primary" value="{% raw %}{{ trans('Create') }}{% endraw %}">
                     </div>
                 </form>
             </div>
@@ -383,81 +377,81 @@ public function edit($id)
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ trans('Member').trans('Edit') }}</div>
+                <div class="card-header">{% raw %}{{ trans('Member').trans('Edit') }}{% endraw %}</div>
 
                 <div class="card-body">
                     <ul class="list-unstyled">
-                        <li>{{ App\Button::GoBack(route('member.index')) }}</li>
+                        <li>{% raw %}{{ App\Button::GoBack(route('member.index')) }}{% endraw %}</li>
                     </ul>
-                    <form method="POST" action="{{ route('member.update' , $user->id) }}">
+                    <form method="POST" action="{% raw %}{{ route('member.update' , $user->id) }}{% endraw %}">
                         @csrf
                         @method('PUT')
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ trans('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('E-Mail Address') }}{% endraw %}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{% raw %}{{ $user->email }}{% endraw %}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{% raw %}{{ $message }}{% endraw %}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ trans('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Name') }}{% endraw %}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{% raw %}{{ $user->name }}{% endraw %}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{% raw %}{{ $message }}{% endraw %}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ trans('Permission') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Permission') }}{% endraw %}</label>
 
                             <div class="col-md-6">
                                 <select class="form-control @error('permission') is-invalid @enderror" id="permission" name='permission' required>
                                     @foreach(App\Enum::permission as $key => $value)
                                         @if ($key == $user->permission)
-                                            <option value='{{ $key }}' selected>{{ $value }}</option>
+                                            <option value='{% raw %}{{ $key }}{% endraw %}' selected>{% raw %}{{ $value }}{% endraw %}</option>
                                         @else
-                                            <option value='{{ $key }}'>{{ $value }}</option>
+                                            <option value='{% raw %}{{ $key }}{% endraw %}'>{% raw %}{{ $value }}{% endraw %}</option>
                                         @endif
                                     @endforeach
                                 </select>
 
                                 @error('permission')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{% raw %}{{ $message }}{% endraw %}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ trans('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Password') }}{% endraw %}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password"  autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{% raw %}{{ $message }}{% endraw %}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ trans('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Confirm Password') }}{% endraw %}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation"  autocomplete="new-password">

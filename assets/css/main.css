@@ -9,6 +9,17 @@
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
+
+/* Document
+   ========================================================================== */
+
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
 html {
     line-height: 1.15;
     /* 1 */
@@ -45,6 +56,12 @@ section {
     display: block;
 }
 
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
 h1 {
     font-size: 2em;
     margin: 0.67em 0;
@@ -75,6 +92,12 @@ main {
 figure {
     margin: 1em 40px;
 }
+
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
 
 hr {
     -webkit-box-sizing: content-box;
@@ -115,6 +138,12 @@ a {
     -webkit-text-decoration-skip: objects;
     /* 2 */
 }
+
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
 
 abbr[title] {
     border-bottom: none;
@@ -170,10 +199,20 @@ dfn {
     font-style: italic;
 }
 
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
 mark {
     background-color: #ff0;
     color: #000;
 }
+
+
+/**
+ * Add the correct font size in all browsers.
+ */
 
 small {
     font-size: 80%;
@@ -215,14 +254,29 @@ video {
     display: inline-block;
 }
 
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
 audio:not([controls]) {
     display: none;
     height: 0;
 }
 
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
 img {
     border-style: none;
 }
+
+
+/**
+ * Hide the overflow in IE.
+ */
 
 svg:not(:root) {
     overflow: hidden;
@@ -326,6 +380,14 @@ fieldset {
     padding: 0.35em 0.75em 0.625em;
 }
 
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
 legend {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -354,6 +416,11 @@ progress {
     vertical-align: baseline;
     /* 2 */
 }
+
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
 
 textarea {
     overflow: auto;
@@ -407,6 +474,12 @@ textarea {
     -webkit-appearance: none;
 }
 
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
 ::-webkit-file-upload-button {
     -webkit-appearance: button;
     /* 1 */
@@ -438,13 +511,36 @@ summary {
     display: list-item;
 }
 
+
+/* Scripting
+   ========================================================================== */
+
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
 canvas {
     display: inline-block;
 }
 
+
+/**
+ * Add the correct display in IE.
+ */
+
 template {
     display: none;
 }
+
+
+/* Hidden
+   ========================================================================== */
+
+
+/**
+ * Add the correct display in IE 10-.
+ */
 
 [hidden] {
     display: none;
@@ -577,13 +673,12 @@ mark {
 }
 
 code {
-<<<<<<< HEAD
     padding: 0.2em 0.4em;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 0.9rem;
-    color: #25292e;
-    background-color: #f6f8fa;
-    border-radius: 3px;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
 }
 
 pre {
@@ -608,38 +703,6 @@ pre>code {
     white-space: pre;
     background: transparent;
     border: 0;
-=======
-  padding: 0.2em 0.4em;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 0.9rem;
-  color: #c7254e;
-  background-color: #f9f2f4;
-  border-radius: 4px;
-}
-
-pre {
-  padding: 0.8rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  overflow-x: auto;
-  font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  color: #c7254e;
-  word-wrap: normal;
-  background-color: #f9f2f4;
-  border: solid 1px #dce6f0;
-  border-radius: 0.3rem;
-}
-
-pre>code {
-  padding: 0;
-  margin: 0;
-  font-size: 0.9rem;
-  color: #c7254e;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
->>>>>>> 6b0b1fb94143c533bab8b8ac1c30631ae983409d
 }
 
 .blur {
@@ -1202,7 +1265,11 @@ button:disabled :focus {
     float: right;
 }
 
+
+/* ------- pagination -------- */
+
 .pagination {
+    height: 36px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1210,6 +1277,62 @@ button:disabled :focus {
     -ms-flex-pack: center;
     justify-content: center;
     margin: 1.25rem auto;
+}
+
+.pagination ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.pagination li {
+    display: inline;
+}
+
+.pagination li:first-child a {
+    border-left-width: 1px;
+    border-radius: 3px 0 0 3px;
+}
+
+.pagination li:last-child a {
+    border-radius: 0 3px 3px 0;
+}
+
+.pagination a {
+    float: left;
+    padding: 0 14px;
+    line-height: 34px;
+    border: 1px solid #DDD;
+    border-left-width: 0;
+}
+
+.pagination a:hover {
+    background-color: whiteSmoke;
+}
+
+.active a {
+    background-color: whiteSmoke;
+    color: #999;
+    cursor: default;
+}
+
+.active a:hover {
+    color: #999;
+    cursor: default;
+}
+
+.disabled a {
+    color: #999;
+    cursor: default;
+}
+
+.disabled a:hover {
+    color: #999;
+    cursor: default;
+    background-color: transparent;
 }
 
 .pagination ul {
@@ -1519,6 +1642,9 @@ body.modal--open {
     /* override*/
 }
 
+
+/* Primary notice */
+
 .notice--primary {
     margin: 2em 0 !important;
     /* override*/
@@ -1577,6 +1703,9 @@ body.modal--open {
     margin-bottom: 0;
     /* override*/
 }
+
+
+/* Info notice */
 
 .notice--info {
     margin: 2em 0 !important;
@@ -1637,6 +1766,9 @@ body.modal--open {
     /* override*/
 }
 
+
+/* Warning notice */
+
 .notice--warning {
     margin: 2em 0 !important;
     /* override*/
@@ -1696,6 +1828,9 @@ body.modal--open {
     /* override*/
 }
 
+
+/* Success notice */
+
 .notice--success {
     margin: 2em 0 !important;
     /* override*/
@@ -1754,6 +1889,9 @@ body.modal--open {
     margin-bottom: 0;
     /* override*/
 }
+
+
+/* Danger notice */
 
 .notice--danger {
     margin: 2em 0 !important;
@@ -2320,8 +2458,5 @@ table td {
     fill: #277cea;
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 6b0b1fb94143c533bab8b8ac1c30631ae983409d
 /*# sourceMappingURL=main.map */
