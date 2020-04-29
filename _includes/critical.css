@@ -137,7 +137,11 @@ h2 {
 a {
     color: #277cea;
     text-decoration: none;
+<<<<<<< HEAD
     /*border-bottom: 1px dashed #277cea*/
+=======
+    /* border-bottom: 1px dashed #277cea */
+>>>>>>> 6b0b1fb94143c533bab8b8ac1c30631ae983409d
 }
 
 .blur {
