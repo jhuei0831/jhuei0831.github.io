@@ -126,6 +126,5 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-admin
-  - jekyll-paginate-v2
   - jemoji
   - wdm
