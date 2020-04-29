@@ -4,6 +4,17 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2020-04-30
+---
+**Added**
+* [Laravel Backend Control Website - 5](https://jhuei.com/laravel-myweb-5/) / Post
+
+**Fixed**
+* 文章錯字及字元未顯示
+
+**Changed**
+* pre & code 顏色
+
 ### 2020-04-29
 ---
 **Added**

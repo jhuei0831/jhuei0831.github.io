@@ -304,7 +304,7 @@ Route::prefix('manage')->group(function(){
 @endsection
 
 ```
-之前在 `App/Enum` 中加入的權限在上片派上用場了 :
+之前在 `App/Enum` 中加入的權限在上面派上用場了 :
 
 ```php
 // 帳號權限
@@ -342,7 +342,7 @@ public function store(Request $request)
     }
 
     if ($data) {
-        User::create($request->all());
+        $user->save();
     }
 
     return back()->with('success','會員新增成功 !');
