@@ -74,7 +74,7 @@ exclude:
   - sleek.jpg
 
 include: ['_pages']
-permalink: /:title/
+# permalink: /:title/
 # permalink: /:year/:month/:title.html
 
 jekyll-archives:
