@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
                     {% assign posts = paginator.posts %}   
-                    {% for post in posts %}
+                    {% for post in paginator.posts %}
                         {% include card.html %}
                     {% endfor %}
                 </div>
