@@ -26,10 +26,8 @@
         <section>
             <div class="container">
                 <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
-                    {% assign posts = paginator.posts %}   
-                    {% for post in paginator.posts %}
-                        {% include card.html %}
-                    {% endfor %}
+                    {% if paginator %} {% assign posts = paginator.posts %} {% else %} {% assign posts = site.posts %} {% endif %} {% for post in posts %} {% include card.html %} {% endfor %}
+
                 </div>
             </div>
         </section>
