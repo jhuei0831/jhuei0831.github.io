@@ -6,6 +6,8 @@ description: > # Meta description of Homepage
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jhuei.com" # the base hostname & protocol for your site, e.g. http://example.com
 image: assets/img/icons/android-chrome-256x256.png
+background: 'assets/img/background.JPG'
+tiled_bg: false   # Set this true if you want to tile your background image, otherwise it will be covered
 #Language
 lang: zh-Hant-TW
 words_per_minute: 50

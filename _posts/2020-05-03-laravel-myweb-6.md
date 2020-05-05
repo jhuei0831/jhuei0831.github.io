@@ -450,7 +450,6 @@ public function update(Request $request, $id)
         'is_open' => ['required'],
     ]);
 
-    // 逐筆進行htmlpurufier 並去掉<p></p>
     foreach ($request->except('_token', '_method') as $key => $value) {
         if ($request->filled($key) && $request->filled($key) != NULL) {
             $navbar->$key = $data[$key];
