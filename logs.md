@@ -4,6 +4,14 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2020-05-06
+---
+**Added**
+* [Install Swoole on Windows](https://jhuei.com/swoole-install-on-windows/) / Post
+
+**Fixed**
+* Search description
+
 ### 2020-05-05
 ---
 **Added**
