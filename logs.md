@@ -4,6 +4,11 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2020-05-07
+---
+**Changed**
+* header_links css
+
 ### 2020-05-06
 ---
 **Added**

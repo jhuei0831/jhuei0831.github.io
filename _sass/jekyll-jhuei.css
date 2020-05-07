@@ -745,8 +745,8 @@ pre > code {
   display: none;
   position: absolute;
   top: 3.75em;
-  left: 0;
-  width: 100%;
+  width: 5rem;
+  right: 0;
   height: auto;
   background: #fff;
 }
