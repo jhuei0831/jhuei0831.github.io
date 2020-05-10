@@ -159,11 +159,11 @@ views
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ trans('Page').trans('Manage') }}</div>
+                <div class="card-header">{% raw %}{{ trans('Page').trans('Manage') }}{% endraw %}</div>
 
                 <div class="card-body">
                 <ul class="list-inline">
-                    <li class="list-inline-item">{{ App\Button::Create() }}</li>
+                    <li class="list-inline-item">{% raw %}{{ App\Button::Create() }}{% endraw %}</li>
                 </ul>
                 <div class="alert alert-warning" role="alert">
                         1. 前台排序以頁面修改日期為主。<br>
@@ -173,37 +173,37 @@ views
                         <table id="data" class="table table-hover table-bordered text-center">
                             <thead>
                                 <tr class="table-info active">
-                                    <th class="text-nowrap text-center">{{ trans('Editor') }}</th>
-                                    <th class="text-nowrap text-center">{{ trans('Title') }}</th>
-                                    <th class="text-nowrap text-center">{{ trans('Page').trans('Url') }}</th>
-                                    <th class="text-nowrap text-center">{{ trans('Is_open') }}</th>
-                                    <th class="text-nowrap text-center">{{ trans('Is_slide') }}</th>
-                                    <th class="text-nowrap text-center">{{ trans('Action') }}</th>
+                                    <th class="text-nowrap text-center">{% raw %}{{ trans('Editor') }}{% endraw %}</th>
+                                    <th class="text-nowrap text-center">{% raw %}{{ trans('Title') }}{% endraw %}</th>
+                                    <th class="text-nowrap text-center">{% raw %}{{ trans('Page').trans('Url') }}{% endraw %}</th>
+                                    <th class="text-nowrap text-center">{% raw %}{{ trans('Is_open') }}{% endraw %}</th>
+                                    <th class="text-nowrap text-center">{% raw %}{{ trans('Is_slide') }}{% endraw %}</th>
+                                    <th class="text-nowrap text-center">{% raw %}{{ trans('Action') }}{% endraw %}</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($all_pages as $page)
                                     <tr>
-                                        <td>{{ $page->editor }}</td>
-                                        <td>{{ $page->title }}</td>
+                                        <td>{% raw %}{{ $page->editor }}{% endraw %}</td>
+                                        <td>{% raw %}{{ $page->title }}{% endraw %}</td>
                                         <td>
-                                            {{ $page->url }}
+                                            {% raw %}{{ $page->url }}{% endraw %}
                                         </td>
                                         <td>
-                                            <font color="{{App\Enum::is_open['color'][$page->is_open]}}"><i class="fas fa-{{App\Enum::is_open['label'][$page->is_open]}}"></i></font>
+                                            <font color="{% raw %}{{App\Enum::is_open['color'][$page->is_open]}}{% endraw %}"><i class="fas fa-{% raw %}{{App\Enum::is_open['label'][$page->is_open]}}{% endraw %}"></i></font>
                                         </td>
                                         <td>
-                                            <font color="{{App\Enum::is_open['color'][$page->is_slide]}}"><i class="fas fa-{{App\Enum::is_open['label'][$page->is_slide]}}"></i></font>
+                                            <font color="{% raw %}{{App\Enum::is_open['color'][$page->is_slide]}}{% endraw %}"><i class="fas fa-{% raw %}{{App\Enum::is_open['label'][$page->is_slide]}}{% endraw %}"></i></font>
                                         </td>
                                         <td>
-                                            <form action="{{ route('page.edit',$page->id) }}" method="GET">
+                                            <form action="{% raw %}{{ route('page.edit',$page->id) }}{% endraw %}" method="GET">
                                             @csrf
-                                            {{ App\Button::edit($page->id) }}
+                                            {% raw %}{{ App\Button::edit($page->id) }}{% endraw %}
                                             </form>
-                                            <form action="{{ route('page.destroy',$page->id) }}" method="POST">
+                                            <form action="{% raw %}{{ route('page.destroy',$page->id) }}{% endraw %}" method="POST">
                                             @method('DELETE')
                                             @csrf
-                                            {{ App\Button::deleting($page->id) }}
+                                            {% raw %}{{ App\Button::deleting($page->id) }}{% endraw %}
                                             </form>
                                         </td>
                                     </tr>
@@ -271,70 +271,70 @@ public function index()
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <form action="{{ route('page.store') }}" method="POST">
-                    <div class="card-header">{{ trans('Page').trans('Create') }}</div>
+                <form action="{% raw %}{{ route('page.store') }}{% endraw %}" method="POST">
+                    <div class="card-header">{% raw %}{{ trans('Page').trans('Create') }}{% endraw %}</div>
                     <div class="card-body">
                         <ul class="list-unstyled">
-                            <li>{{ App\Button::GoBack(route('page.index')) }}</li>
+                            <li>{% raw %}{{ App\Button::GoBack(route('page.index')) }}{% endraw %}</li>
                         </ul>
                         @csrf
                         <div class="form-group row">
-                            <label for="title" class="col-md-4 col-form-label text-md-right">{{ trans('Title') }}</label>
+                            <label for="title" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Title') }}{% endraw %}</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title') }}" placeholder="{{ trans('Title') }}">
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{% raw %}{{ old('title') }}{% endraw %}" placeholder="{% raw %}{{ trans('Title') }}{% endraw %}">
                                 @error('title')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{% raw %}{{ $message }}{% endraw %}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="url" class="col-md-4 col-form-label text-md-right">{{ trans('Page').trans('Url') }}</label>
+                            <label for="url" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Page').trans('Url') }}{% endraw %}</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control @error('url') is-invalid @enderror" id="url" name="url" value="{{ old('url') }}" placeholder="{{ trans('Page').trans('Url') }}">
+                                <input type="text" class="form-control @error('url') is-invalid @enderror" id="url" name="url" value="{% raw %}{{ old('url') }}{% endraw %}" placeholder="{% raw %}{{ trans('Page').trans('Url') }}{% endraw %}">
                                 @error('url')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{% raw %}{{ $message }}{% endraw %}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="content" class="col-md-4 col-form-label text-md-right">{{ trans('Content') }}</label>
+                            <label for="content" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Content') }}{% endraw %}</label>
                             <div class="col-md-12">
                                 <textarea id="summernote" name="editordata" class="form-control" >{!! old('content') !!}</textarea>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="is_open" class="col-md-4 col-form-label text-md-right">{{ trans('Is_open') }}</label>
+                            <label for="is_open" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Is_open') }}{% endraw %}</label>
                             <div class="form-inline col-md-6">
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <input class="custom-control-input" type="radio" name="is_open" id="is_open1" value="1">
-                                    <label class="custom-control-label" for="is_open1">{{ trans('Yes') }}</label>
+                                    <label class="custom-control-label" for="is_open1">{% raw %}{{ trans('Yes') }}{% endraw %}</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <input class="custom-control-input" type="radio" name="is_open" id="is_open2" value="0">
-                                    <label class="custom-control-label" for="is_open2">{{ trans('No') }}</label>
+                                    <label class="custom-control-label" for="is_open2">{% raw %}{{ trans('No') }}{% endraw %}</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="is_slide" class="col-md-4 col-form-label text-md-right">{{ trans('Is_slide') }}</label>
+                            <label for="is_slide" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Is_slide') }}{% endraw %}</label>
                             <div class="form-inline col-md-6">
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <input class="custom-control-input" type="radio" name="is_slide" id="is_slide1" value="1">
-                                    <label class="custom-control-label" for="is_slide1">{{ trans('Yes') }}</label>
+                                    <label class="custom-control-label" for="is_slide1">{% raw %}{{ trans('Yes') }}{% endraw %}</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <input class="custom-control-input" type="radio" name="is_slide" id="is_slide2" value="0">
-                                    <label class="custom-control-label" for="is_slide2">{{ trans('No') }}</label>
+                                    <label class="custom-control-label" for="is_slide2">{% raw %}{{ trans('No') }}{% endraw %}</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="card-footer text-center">
-                        <input type="submit" class="btn btn-primary" value="{{ trans('Create') }}">
+                        <input type="submit" class="btn btn-primary" value="{% raw %}{{ trans('Create') }}{% endraw %}">
                     </div>
                 </form>
             </div>
@@ -420,76 +420,76 @@ public function store(Request $request)
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ trans('Page').trans('Edit') }}</div>
+                <div class="card-header">{% raw %}{{ trans('Page').trans('Edit') }}{% endraw %}</div>
 
                 <div class="card-body">
                     <ul class="list-unstyled">
-                        <li>{{ App\Button::GoBack(route('page.index')) }}</li>
+                        <li>{% raw %}{{ App\Button::GoBack(route('page.index')) }}{% endraw %}</li>
                     </ul>
-                    <form method="POST" action="{{ route('page.update' , $page->id) }}">
+                    <form method="POST" action="{% raw %}{{ route('page.update' , $page->id) }}{% endraw %}">
                         @csrf
                         @method('PUT')
 
                         <div class="form-group row">
-                            <label for="title" class="col-md-4 col-form-label text-md-right">{{ trans('Title') }}</label>
+                            <label for="title" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Title') }}{% endraw %}</label>
 
                             <div class="col-md-6">
-                                <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ $page->title }}" required autocomplete="{{ trans('Title') }}" autofocus>
+                                <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{% raw %}{{ $page->title }}{% endraw %}" required autocomplete="{% raw %}{{ trans('Title') }}{% endraw %}" autofocus>
 
                                 @error('title')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{% raw %}{{ $message }}{% endraw %}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="url" class="col-md-4 col-form-label text-md-right">{{ trans('Page').trans('Url') }}</label>
+                            <label for="url" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Page').trans('Url') }}{% endraw %}</label>
 
                             <div class="col-md-6">
-                                <input id="url" type="text" class="form-control @error('url') is-invalid @enderror" name="url" value="{{ $page->url }}" required autocomplete="{{ trans('Page').trans('Url') }}" autofocus readonly>
+                                <input id="url" type="text" class="form-control @error('url') is-invalid @enderror" name="url" value="{% raw %}{{ $page->url }}{% endraw %}" required autocomplete="{% raw %}{{ trans('Page').trans('Url') }}{% endraw %}" autofocus readonly>
 
                                 @error('url')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{% raw %}{{ $message }}{% endraw %}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="content" class="col-md-4 col-form-label text-md-right">{{ trans('Content') }}</label>
+                            <label for="content" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Content') }}{% endraw %}</label>
 
                             <div class="col-md-12">
-                                <textarea id="summernote" name="content" class="form-control ckeditor" >{{ $page->content }}</textarea>
+                                <textarea id="summernote" name="content" class="form-control ckeditor" >{% raw %}{{ $page->content }}{% endraw %}</textarea>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="is_open" class="col-md-4 col-form-label text-md-right">{{ trans('Is_open') }}</label>
+                            <label for="is_open" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Is_open') }}{% endraw %}</label>
                             <div class="form-inline col-md-6">
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input class="custom-control-input" type="radio" name="is_open" id="is_open1" value="1" {{ ($page->is_open=="1")? "checked" : "" }}>
-                                    <label class="custom-control-label" for="is_open1">{{ trans('Yes') }}</label>
+                                    <input class="custom-control-input" type="radio" name="is_open" id="is_open1" value="1" {% raw %}{{ ($page->is_open=="1")? "checked" : "" }}{% endraw %}>
+                                    <label class="custom-control-label" for="is_open1">{% raw %}{{ trans('Yes') }}{% endraw %}</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input class="custom-control-input" type="radio" name="is_open" id="is_open2" value="0" {{ ($page->is_open=="0")? "checked" : "" }}>
-                                    <label class="custom-control-label" for="is_open2">{{ trans('No') }}</label>
+                                    <input class="custom-control-input" type="radio" name="is_open" id="is_open2" value="0" {% raw %}{{ ($page->is_open=="0")? "checked" : "" }}{% endraw %}>
+                                    <label class="custom-control-label" for="is_open2">{% raw %}{{ trans('No') }}{% endraw %}</label>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="is_slide" class="col-md-4 col-form-label text-md-right">{{ trans('Is_slide') }}</label>
+                            <label for="is_slide" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Is_slide') }}{% endraw %}</label>
                             <div class="form-inline col-md-6">
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input class="custom-control-input" type="radio" name="is_slide" id="is_slide1" value="1" {{ ($page->is_slide=="1")? "checked" : "" }}>
-                                    <label class="custom-control-label" for="is_slide1">{{ trans('Yes') }}</label>
+                                    <input class="custom-control-input" type="radio" name="is_slide" id="is_slide1" value="1" {% raw %}{{ ($page->is_slide=="1")? "checked" : "" }}{% endraw %}>
+                                    <label class="custom-control-label" for="is_slide1">{% raw %}{{ trans('Yes') }}{% endraw %}</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input class="custom-control-input" type="radio" name="is_slide" id="is_slide2" value="0" {{ ($page->is_slide=="0")? "checked" : "" }}>
-                                    <label class="custom-control-label" for="is_slide2">{{ trans('No') }}</label>
+                                    <input class="custom-control-input" type="radio" name="is_slide" id="is_slide2" value="0" {% raw %}{{ ($page->is_slide=="0")? "checked" : "" }}{% endraw %}>
+                                    <label class="custom-control-label" for="is_slide2">{% raw %}{{ trans('No') }}{% endraw %}</label>
                                 </div>
                             </div>
                         </div>
