@@ -23,13 +23,14 @@ description: 驗證、訊息、中介層  - Validation 、Message、Middleware
 比如 `資料驗證`、`新增、修改、刪除後的訊息`以及 `權限`的利用，這篇將盡可能的解釋。<br><br>
 ### 本篇重點
 ---
-* 資料送出後的訊息
-* 資料送出後的驗證(中介層)
-* 權限的使用例子
-* 額外補充<br><br>
+* [資料送出後的訊息](#data)
+* [資料送出後的驗證](#validate)(中介層)
+* [權限的使用例子](#example)
+* [額外補充](#sup)<br><br>
 
 
-### 1. 資料送出後的訊息
+{: id='data'}
+### 1. 資料送出後的訊息 [🔝](#top)
 ---
 在 [第四篇](https://jhuei.com/laravel-myweb-4/) 可以看到儲存或刪除資料後都會有 :
 
@@ -114,7 +115,9 @@ return back()->with('success','會員新增成功 !');
 沒意外新增成功上方會出現成功的訊息。
 
 [![message](https://i.imgur.com/aMP6lSD.png)](https://i.imgur.com/aMP6lSD.png)<br><br>
-### 2. 資料送出後的驗證
+
+{: id='validate'}
+### 2. 資料送出後的驗證 [🔝](#top)
 ---
 想一想，會出現會員新增成功，就代表你通過了驗證。
 
@@ -161,7 +164,9 @@ $data = $request->validate([
 
 {: .notice--warning}
 表單驗證其實可以自訂，不一定要使用 `use Illuminate\Http\Request;` 的 `Request`，以後再說😆
-### 3. 權限的使用例子
+
+{: id='example'}
+### 3. 權限的使用例子 [🔝](#top)
 ---
 既然 [第四篇](https://jhuei.com/laravel-myweb-4/) 建立了會員帳號的權限，以下就提出一些使用的例子。
 
@@ -307,7 +312,9 @@ public function create()
 
 諸如此類的例子，就交給你自由發揮了😉
 
-### 4. 額外補充
+
+{: id='sup'}
+### 4. 額外補充 [🔝](#top)
 ---
 
 ```

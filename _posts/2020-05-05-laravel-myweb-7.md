@@ -23,10 +23,12 @@ Hello 大家 ! 在 [上一篇](https://jhuei.com/laravel-myweb-6/) 提到了視�
 
 ### 本篇重點
 ---
-* 視圖合成器
-* 拖曳排序
+* [視圖合成器](#view)
+* [拖曳排序](#sort)
+* [總結](#conclusion)
 
-### 1. 視圖合成器
+{: id='view'}
+### 1. 視圖合成器 [🔝](#top)
 ---
 視圖合成器(View Composer) 提供了一種方法讓你將資料一次性的分享到指定的視圖，上一篇所使用到的 :
 
@@ -48,7 +50,8 @@ View::composer(['*'], function ($view) {
 {: .notice--danger}
 
 
-### 2. 拖曳排序
+{: id='sort'}
+### 2. 拖曳排序 [🔝](#top)
 ---
 要完成拖曳排序，要使用幾個工具 :
 * Datatable
@@ -222,7 +225,8 @@ public function sort(Request $request)
 ```
 在一次拖曳排序後重新整理應該就會實現了。
 
-### 總結
+{: id='conclusion'}
+### 總結 [🔝](#top)
 ---
 * 使用 [View composer](https://laravel.com/docs/5.8/views#view-composers) 必須確定自己宣告的名稱。
 * View composer 也可以在 `Provide` 中使用。

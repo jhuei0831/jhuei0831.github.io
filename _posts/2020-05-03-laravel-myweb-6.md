@@ -23,17 +23,27 @@ Hello 大家 ! [上一篇](https://jhuei.com/laravel-myweb-5/) 明確地將前�
 <br><br>
 ### 本篇重點
 ---
-* 導覽列新增、修改、刪除及顯示(CRUD)
-* 導覽列前台顯示
-* 補充<br><br>
+* [新增Controller、Model、Migration](#cmm)
+* [修改Migration](#migration)
+* [修改Model](#model)
+* [加入路由](#route)
+* [建立視圖](#view)
+* [導覽列新增](#create)
+* [導覽列修改](#edit)
+* [導覽列刪除](#delete)
+* [導覽列前台顯示](#font)
+* [補充](#sup)<br><br>
 
-### 1. 新增Controller、Model、Migration
+{: id='cmm'}
+### 1. 新增Controller、Model、Migration [🔝](#top)
 ---
 ```
 // 一次性建立
 php artisan make:model Navbar -mcr
 ```
-### 2. 修改Migration
+
+{: id='migration'}
+### 2. 修改Migration [🔝](#top)
 ```php
 <?php
 
@@ -69,7 +79,8 @@ class CreateNavbarsTable extends Migration
 php artisan migrate
 ```
 
-### 3. 修改Model
+{: id='model'}
+### 3. 修改Model [🔝](#top)
 ---
 ```php
 <?php
@@ -91,7 +102,8 @@ class Navbar extends Model
 
 ```
 
-### 4. 加入路由
+{: id='route'}
+### 4. 加入路由 [🔝](#top)
 ---
 ```php
 Route::prefix('manage')->middleware('auth','admin')->group(function(){
@@ -101,7 +113,8 @@ Route::prefix('manage')->middleware('auth','admin')->group(function(){
 
 ```
 
-### 5. 建立視圖
+{: id='view'}
+### 5. 建立視圖 [🔝](#top)
 ---
 ```
 views
@@ -116,7 +129,8 @@ views
         └── index.blade.php
 ```
 
-### 6. 導覽列新增
+{: id='create'}
+### 6. 導覽列新增 [🔝](#top)
 ---
 先建立導覽列管理首頁 `index.blade.php` :
 
@@ -325,7 +339,8 @@ public function store(Request $request)
 }
 ```
 
-### 7. 導覽列修改
+{: id='edit'}
+### 7. 導覽列修改 [🔝](#top)
 ---
 `edit.blade.php` :
 ```php
@@ -476,7 +491,8 @@ public function update(Request $request, $id)
 }
 ```
 
-### 8. 導覽列刪除
+{: id='delete'}
+### 8. 導覽列刪除 [🔝](#top)
 ---
 `NavbarController.php` :
 ```php
@@ -490,7 +506,8 @@ public function destroy($id)
 }
 ```
 
-### 9. 導覽列前台顯示
+{: id='font'}
+### 9. 導覽列前台顯示 [🔝](#top)
 ---
 `web.php`
 ```php
@@ -588,7 +605,8 @@ View::composer(['*'], function ($view) {
 
 ```
 
-### 10. 補充
+{: id='sup'}
+### 10. 補充 [🔝](#top)
 ---
 照著上面作，沒意外前台應該會顯示後台所新增的導覽列。
 [![navbar](https://i.imgur.com/9pX0tZD.png)](https://i.imgur.com/9pX0tZD.png)
