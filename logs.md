@@ -4,6 +4,12 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2020-05-12
+---
+**Added**
+* [Long Polling](https://jhuei.com/long-polling/) / Post
+
+
 ### 2020-05-10
 ---
 **Added**
