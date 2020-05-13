@@ -4,6 +4,11 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2020-05-13
+---
+**Added**
+* [Long Polling Database Example](https://jhuei.com/long-polling-example/) / Post
+
 ### 2020-05-12
 ---
 **Added**
