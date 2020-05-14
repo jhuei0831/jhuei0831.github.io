@@ -1,8 +1,8 @@
 # SITE CONFIGURATION
 title: Jhuei Yummy # your site title
 author: Jhuei # You :P
-description: > # Meta description of Homepage
-  Share the coding issues and solution :)
+# description: > # Meta description of Homepage
+#   Share the coding issues and solution :)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jhuei.com" # the base hostname & protocol for your site, e.g. http://example.com
 image: assets/img/icons/android-chrome-256x256.png
