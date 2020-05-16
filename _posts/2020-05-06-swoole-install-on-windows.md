@@ -87,36 +87,36 @@ Swoole 下載地址 : [https://pecl.php.net/package/swoole](https://pecl.php.net
 #### Step 1. 解壓縮下載好的檔案到 cygwin64/home/ 底下
 
 #### Step 2. 執行 Cygwin
-```
+
 打開 ./cygwin64/Cygwin.bat
-```
+
 #### Step 3. 進入壓縮後的Swoole資料夾
-```
+```command
 cd /home/swoole-4.5.0
 ```
 #### Step 4. 產生編譯文件 configure
-```
+```command
 phpize
 ```
 #### Step 5. 安裝 Swoole
-```
+```command
 ./configure && make && make install
 ```
 
 #### Step 6. 在php.ini文件中加入 extension=swoole.so
-```
+```command
 // 可以使用下面指令找到php.ini檔案位置
 php -i | grep php.ini
 ```
 #### Step 7. 查看是否安裝成功
-```
+```command
 php -m
 ```
 [![swoole](https://i.imgur.com/PaZwDEo.png)](https://i.imgur.com/PaZwDEo.png)
 
 ### 3. 測試 Swoole
 ---
-```
+```command
 cd /home/swoole-4.5.0/examples/http2
 php server.php
 ```

@@ -43,7 +43,7 @@ Hello 大家 ! 在 [第6篇](https://jhuei.com/laravel-myweb-7/) 創建了導覽
 ### 1. 新增Controller、Model、Migration [🔝](#top)
 ---
 
-```
+```command
 // 一次性建立
 php artisan make:model Page -mcr
 ```
@@ -80,13 +80,12 @@ class CreatePagesTable extends Migration
         Schema::dropIfExists('pages');
     }
 }
-
 ```
 之後會建立選單連結頁面，所以先加入選單ID欄位。
 
 然後寫入資料庫 :
 
-```
+```command
 php artisan migrate
 ```
 
@@ -94,7 +93,7 @@ php artisan migrate
 ### 3. 修改Model [🔝](#top)
 ---
 
-```
+```php
 <?php
 
 namespace App;
@@ -111,7 +110,6 @@ class Page extends Model
         "name", "menu_id" ,"title", "url", "content", "is_open",
     ];
 }
-
 ```
 
 {: id='route'}
@@ -124,22 +122,21 @@ Route::prefix('manage')->middleware('auth','admin')->group(function(){
     Route::resource('navbar', 'NavbarController');
     Route::resource('page', 'PageController');
 });
-
 ```
 
 {: id='view'}
 ### 5. 建立視圖 [🔝](#top)
 ---
 
-```
-views
-├── _layouts
-├── _partials
-├── auth
-└── manage    # 後台管理
-    └── member  # 會員管理
-    └── navbar  # 導覽列管理
-    └── page    # 頁面管理
+```treeview
+views/
+├── _layouts/
+├── _partials/
+├── auth/
+└── manage/  
+    └── member/  
+    └── navbar/  
+    └── page/  
         ├── create.blade.php 
         ├── edit.blade.php
         └── index.blade.php
@@ -217,7 +214,6 @@ views
     </div>
 </div>
 @endsection
-
 ```
 `PageController.php` :
 ```php
@@ -351,7 +347,6 @@ public function index()
     });
 </script>
 @show
-
 ```
 
 `PageController.php` :
@@ -514,60 +509,59 @@ public function store(Request $request)
     $('.note-btn').removeAttr('title');
 </script>
 @show
-
 ```
 
 `PageController.php` :
 
 ```php
 public function edit($id)
-    {
-        if (Auth::check() && Auth::user()->permission < '3') {
-            return back()->with('warning', '權限不足以訪問該頁面 !');
-        }
-        $page = Page::where('id',$id)->first();
-        $navbars = Navbar::where('type', '=', '1')->get();
-        return view('manage.page.edit',compact('page','navbars'));
+{
+    if (Auth::check() && Auth::user()->permission < '3') {
+        return back()->with('warning', '權限不足以訪問該頁面 !');
     }
+    $page = Page::where('id',$id)->first();
+    $navbars = Navbar::where('type', '=', '1')->get();
+    return view('manage.page.edit',compact('page','navbars'));
+}
 
-    public function update(Request $request, $id)
-    {
-        if (Auth::check() && Auth::user()->permission < '3') {
-            return back()->with('warning', '權限不足以訪問該頁面 !');
-        }
-        $error = 0;
-        $page = Page::where('id',$id)->first();
+public function update(Request $request, $id)
+{
+    if (Auth::check() && Auth::user()->permission < '3') {
+        return back()->with('warning', '權限不足以訪問該頁面 !');
+    }
+    $error = 0;
+    $page = Page::where('id',$id)->first();
 
-        $data = $this->validate($request, [
-            'menu_id' => ['nullable'],
-            'title' => ['required', 'string', 'max:255'],
-            'url' => ['required', 'string', 'max:255'],
-            'is_open' => ['required'],
-            'is_slide' => ['required'],
-        ]);
+    $data = $this->validate($request, [
+        'menu_id' => ['nullable'],
+        'title' => ['required', 'string', 'max:255'],
+        'url' => ['required', 'string', 'max:255'],
+        'is_open' => ['required'],
+        'is_slide' => ['required'],
+    ]);
 
-        foreach ($request->except('_token','_method','files') as $key => $value) {
-            if ($request->filled($key) && $request->filled($key) != NULL && $key != 'content') {
-                $page->$key = $data[$key];
-                if ($page->$key == '') {
-                    $error += 1;
-                }
+    foreach ($request->except('_token','_method','files') as $key => $value) {
+        if ($request->filled($key) && $request->filled($key) != NULL && $key != 'content') {
+            $page->$key = $data[$key];
+            if ($page->$key == '') {
+                $error += 1;
             }
-            else{
-                $page->$key = NULL;
-            }
-        }
-        $page->content = $request->input('content');
-        $page->editor = Auth::user()->name;
-
-        if ($error == 0) {
-            $page->save();
         }
         else{
-            return back()->withInput()->with('warning', '請確認輸入 !');
+            $page->$key = NULL;
         }
-        return back()->with('success','修改頁面成功 !');
     }
+    $page->content = $request->input('content');
+    $page->editor = Auth::user()->name;
+
+    if ($error == 0) {
+        $page->save();
+    }
+    else{
+        return back()->withInput()->with('warning', '請確認輸入 !');
+    }
+    return back()->with('success','修改頁面成功 !');
+}
 ```
 
 {: id='delete'}

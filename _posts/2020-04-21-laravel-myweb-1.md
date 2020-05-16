@@ -54,14 +54,14 @@ tags:
 </div>
 
 之後在 MySQL 建立資料庫 `myweb` ， 並在 `.env` 中將資料庫相關資料填上。
-```
+
+```setting
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=myweb
 DB_USERNAME=username
 DB_PASSWORD=password
-
 ```
 
 資料庫設定完後，Laravel 創建完成後 `php artisan make:auth`，這一步的目的是建立基本的用戶認證，如果之後你要自己建立也行，問題不大。

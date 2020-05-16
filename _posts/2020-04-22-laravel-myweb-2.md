@@ -32,7 +32,7 @@ tags:
 
 打開 `./config/app.php` ，這個檔案內就是對網站的基礎設定，語系、時間等等。有被 `env` 括弧起來的內容會採納 `.env` 檔案的內容。以下是一些我的設定，可以根據個人需求更改。
 
-```
+```setting
 'timezone' => 'Asia/Taipei',   // 時間
 'locale' => 'zh-TW',           // 語系
 'fallback_locale' => 'zh-TW',

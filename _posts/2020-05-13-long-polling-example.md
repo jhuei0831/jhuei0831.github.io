@@ -32,12 +32,12 @@ Hello 大家，[這一篇](https://jhuei.com/long-polling/) 提到了一個文�
 {: id='tree'}
 ### 1. 資料結構 [🔝](#top)
 ---
-```
-php-long-polling
-    └── client
+```treeview
+php-long-polling/
+    └── client/
         ├── client.js 
         └── client.html
-    └── server  
+    └── server/
         ├── database.php 
         └── server.php
     └── index.php
@@ -204,7 +204,6 @@ $(function() {
         </table>
     </body>
 </html>
-
 ```
 
 {: id='end'}

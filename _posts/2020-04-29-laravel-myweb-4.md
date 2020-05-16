@@ -28,7 +28,7 @@ description: Laravel 會員管理 / CRUD - Laravel member system / CRUD
 
 這裡 `Model`直接使用 `app/User.php`，然後建立 `Controller`。
 
-```
+```php
 php artisan make:controller MemberController --resource
 ```
 
@@ -144,13 +144,13 @@ return view('manage.member.create');
 ```
 這時候要先來建立會員新增的頁面，在 `views` 底下根據下表建立檔案及資料夾 :
 
-```
-views
-├── _layouts
-├── _partials
-├── auth
-└── manage      # 後台管理
-    └── member  # 會員管理
+```treeview
+views/
+├── _layouts/
+├── _partials/
+├── auth/
+└── manage /     
+    └── member  
         ├── create.blade.php 
         ├── edit.blade.php
         └── index.blade.php

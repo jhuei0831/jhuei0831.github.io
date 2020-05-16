@@ -175,7 +175,6 @@ View::composer(['*'], function ($view) {
     });
 </script>
 @show
-
 ```
 
 接著在，`index.blade.php` 加入按鈕 :

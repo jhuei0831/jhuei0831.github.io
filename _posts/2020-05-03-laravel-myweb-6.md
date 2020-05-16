@@ -37,7 +37,7 @@ Hello 大家 ! [上一篇](https://jhuei.com/laravel-myweb-5/) 明確地將前�
 {: id='cmm'}
 ### 1. 新增Controller、Model、Migration [🔝](#top)
 ---
-```
+```command
 // 一次性建立
 php artisan make:model Navbar -mcr
 ```
@@ -71,11 +71,10 @@ class CreateNavbarsTable extends Migration
         Schema::dropIfExists('navbars');
     }
 }
-
 ```
 然後寫入資料庫 :
 
-```
+```command
 php artisan migrate
 ```
 
@@ -99,7 +98,6 @@ class Navbar extends Model
         "name", "sort", "link", "type", "is_open",
     ];
 }
-
 ```
 
 {: id='route'}
@@ -110,20 +108,19 @@ Route::prefix('manage')->middleware('auth','admin')->group(function(){
     Route::resource('member', 'MemberController');
     Route::resource('navbar', 'NavbarController');
 });
-
 ```
 
 {: id='view'}
 ### 5. 建立視圖 [🔝](#top)
 ---
-```
-views
-├── _layouts
-├── _partials
-├── auth
-└── manage      # 後台管理
-    └── member  # 會員管理
-    └── navbar  # 導覽列管理
+```treeview
+views/
+├── _layouts/
+├── _partials/
+├── auth/
+└── manage  /    
+    └── member  
+    └── navbar  
         ├── create.blade.php 
         ├── edit.blade.php
         └── index.blade.php
@@ -197,7 +194,6 @@ views
     </div>
 </div>
 @endsection
-
 ```
 `NavbarController.php` :
 ```php
@@ -289,7 +285,6 @@ public function index()
     </div>
 </div>
 @endsection
-
 ```
 `NavbarController.php` :
 ```php
@@ -437,7 +432,6 @@ public function store(Request $request)
     </div>
 </div>
 @endsection
-
 ```
 `NavbarController.php` :
 ```php
@@ -602,7 +596,6 @@ View::composer(['*'], function ($view) {
         </div>
     </div>
 </nav>
-
 ```
 
 {: id='sup'}
@@ -637,7 +630,7 @@ const type =[
 
 並且在 `_layouts/manage/app.blade.php` 新增 `fontawesome` ，不管你是要用`CDN`或者引入 :
 
-```
+```html
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 ```
 

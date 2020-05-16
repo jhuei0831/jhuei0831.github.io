@@ -43,7 +43,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 ```
 我們在之中加入 :
 
-```
+```php
 Route::get('/manage', function () {return view('manage.index');})->name('manage');
 ```
 這段的意思是在 `http://127.0.0.1/manage` 看到 `views/manage/index.blade.php` 的內容，並將其命名為 `manage`。
@@ -57,7 +57,7 @@ Route::get('/manage', function () {return view('manage.index');})->name('manage'
 
 如果多個頁面都要使用，何不先定義，之後再引入即可。在`./app` 底下建立 `Enum.php` 作為放參數的地方，並直接在裡面加上 :
 
-```
+```php
 <?php
 
 namespace App;
@@ -87,7 +87,7 @@ class Enum extends Model
 
 在`./app` 底下建立 `Button.php` 作為放按鈕的地方，並直接在裡面加上 :
 
-```
+```php
 <?php
 
 namespace App;
@@ -96,69 +96,69 @@ use Illuminate\Database\Eloquent\Model;
 
 class Button extends Model
 {
-    	public static function Detail($id)
-		{
-			$url = URL::full();
-			echo "<button type=\"submit\" class='btn btn-sm btn-secondary'>";
-			echo 	"<i class='fas fa-info-circle'></i> ".trans('Detail');
-			echo "</a>";
-		}
+	public static function Detail($id)
+	{
+		$url = URL::full();
+		echo "<button type=\"submit\" class='btn btn-sm btn-secondary'>";
+		echo 	"<i class='fas fa-info-circle'></i> ".trans('Detail');
+		echo "</a>";
+	}
 
-		public static function Deleting($id)
-		{
-			echo "<button type=\"submit\" class='btn btn-sm btn-danger btn-delete' onclick='return confirm(\"確認刪除?\")'>";
-			echo 	"<i class='fas fa-trash-alt'></i> ".trans('Delete');
-			echo "</button>";
-		}
+	public static function Deleting($id)
+	{
+		echo "<button type=\"submit\" class='btn btn-sm btn-danger btn-delete' onclick='return confirm(\"確認刪除?\")'>";
+		echo 	"<i class='fas fa-trash-alt'></i> ".trans('Delete');
+		echo "</button>";
+	}
 
-		public static function Edit($id)
-		{
-			echo "<button type=\"submit\" class='btn btn-sm btn-success' formtarget='_blank'>";
-			echo "<i class='fas fa-pencil-alt'></i> " . trans('Edit');
-			echo "</button>";
-		}
+	public static function Edit($id)
+	{
+		echo "<button type=\"submit\" class='btn btn-sm btn-success' formtarget='_blank'>";
+		echo "<i class='fas fa-pencil-alt'></i> " . trans('Edit');
+		echo "</button>";
+	}
 
-		public static function Create()
-		{
-			$url = URL::full();
-			echo "<a class='btn btn-sm btn-primary' href='{$url}/create'>";
-			echo 	"<i class='fas fa-plus'></i> ".trans('Create');
-			echo "</a>";
-		}
+	public static function Create()
+	{
+		$url = URL::full();
+		echo "<a class='btn btn-sm btn-primary' href='{$url}/create'>";
+		echo 	"<i class='fas fa-plus'></i> ".trans('Create');
+		echo "</a>";
+	}
 
-		public static function Reset()
-		{
-			echo "<p class='text-right'>";
-			echo	"<a class='btn btn-sm btn-reset btn-danger' href='reset.php'>";
-			echo		"<i class='fas fa-undo-alt'></i> ".trans('Reset');
-			echo 	"</a>";
-			echo "</p>";
-		}
+	public static function Reset()
+	{
+		echo "<p class='text-right'>";
+		echo	"<a class='btn btn-sm btn-reset btn-danger' href='reset.php'>";
+		echo		"<i class='fas fa-undo-alt'></i> ".trans('Reset');
+		echo 	"</a>";
+		echo "</p>";
+	}
 
-		public static function To($url=false,$to, $txt, $query="", $class="btn-secondary", $fas="list-ol", $confirm=false)
-		{
-			$url = $url?URL::full():'';
-			if ($confirm == true) {
-				$confirm = 'onclick="return confirm(\'確認刪除?\')"';
-			}
-			if ($url) {
-				echo "<a class='btn btn-sm {$class}' href='{$url}/{$to}/{$query}' {$confirm}>";
-			}
-			else{
-				echo "<a class='btn btn-sm {$class}' href='{$to}/{$query}' {$confirm}>";
-			}
-			echo 	"<i class='fas fa-{$fas}'></i> {$txt}";
-			echo "</a>";
+	public static function To($url=false,$to, $txt, $query="", $class="btn-secondary", $fas="list-ol", $confirm=false)
+	{
+		$url = $url?URL::full():'';
+		if ($confirm == true) {
+			$confirm = 'onclick="return confirm(\'確認刪除?\')"';
 		}
-
-		public static function GoBack($url = "#")
-		{
-			$target_url = ($url) ? $url: URL::previous();
-
-			echo "<a class='btn btn-sm btn-default' href='{$target_url}'>";
-			echo 	"<i class='fas fa-arrow-left'></i> ".trans('Previous');
-			echo "</a>";
+		if ($url) {
+			echo "<a class='btn btn-sm {$class}' href='{$url}/{$to}/{$query}' {$confirm}>";
 		}
+		else{
+			echo "<a class='btn btn-sm {$class}' href='{$to}/{$query}' {$confirm}>";
+		}
+		echo 	"<i class='fas fa-{$fas}'></i> {$txt}";
+		echo "</a>";
+	}
+
+	public static function GoBack($url = "#")
+	{
+		$target_url = ($url) ? $url: URL::previous();
+
+		echo "<a class='btn btn-sm btn-default' href='{$target_url}'>";
+		echo 	"<i class='fas fa-arrow-left'></i> ".trans('Previous');
+		echo "</a>";
+	}
 }
 
 ```

@@ -108,7 +108,6 @@ return back()->with('success','會員新增成功 !');
     </div>
 </body>
 </html>
-
 ```
 搞定 ! 回到會員管理新增一筆資料看看 !
 
@@ -201,7 +200,7 @@ class Kernel extends HttpKernel
 可以看到 `admin` 和 `auth` 兩個中介層，`admin` 是等等要創立的，意義是管理員才能進入後台 ; 而 `auth` 代表是否有登入。
 
 輸入以下指令生成中介層 `Admin.php` :
-```
+```command
 php artisan make:middleware Admin
 ```
 
@@ -223,7 +222,6 @@ class Admin
         return redirect('home');
     }
 }
-
 ```
 
 上面的意思就是如果登入權限不等於0才能存取路由，否則就要導回前台頁面。([auth用法](https://laravel.com/docs/5.8/authentication))
@@ -286,7 +284,6 @@ Route::prefix('manage')->middleware('auth','admin')->group(function(){
         </div>
     </div>
 </nav>
-
 ```
 可以看到其中的 :
 ```html
@@ -317,7 +314,7 @@ public function create()
 ### 4. 額外補充 [🔝](#top)
 ---
 
-```
+```command
 php artisan make:controller MemberController --resource
 ```
 `--resource` 代表建立了一個包含CRUD的控制器。
@@ -340,12 +337,12 @@ php artisan make:controller MemberController --resource
 | destroy($id)     | 刪除某筆資料     |
 
 如果要建立一個空的控制器 :
-```
+```command
 php artisan make:controller MemberController
 ```
 
 如果要同時建立 `model`、`migration`、`controller --resource` :
-```
+```command
 php artisan make:model Member -mcr
 ```
 
@@ -359,7 +356,7 @@ php artisan make:model Member -mcr
 
 可以用下列指令看到所有可用選項 :
 
-```
+```command
 php artisan make:model --help
 ```
 
