@@ -38,3 +38,21 @@ img::selection {
 figure {
   margin: 0;
 }
+
+#top-icon-tablet {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  margin-right: 2rem;
+  margin-left: 15px;
+
+  &:hover {
+    color: #d44375;
+  }
+}
+
+@media (min-width: $lg) {
+  #top-icon-tablet {
+    display: none !important;
+  }
+}

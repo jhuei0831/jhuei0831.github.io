@@ -6,6 +6,9 @@ permalink: "/logs/"
 
 ### 2020-05-16
 ---
+**Added**
+* Top button
+
 **Changed**
 * Highlight
 
