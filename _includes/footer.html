@@ -1,3 +1,4 @@
+<a id="top-icon-tablet" href="#" style="display: none;"><i class="fas fa-chevron-up fa-lg"></i></a>
 <footer class="footer">
   <div class="container">
     <nav class="social">
@@ -34,7 +35,26 @@
 <script async src="{{ "/assets/js/bundle.js" | relative_url }}"></script>
 <script src="/assets/js/prism.js"></script>
 <link rel="stylesheet" href="/assets/css/prism.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $("code").removeClass('language-plaintext');
+    /* 回到頂端 */
+      $(window).scroll(function(){
+          if ($(this).scrollTop() > 200) {
+              $('#top-icon-tablet').fadeIn();
+          } else {
+              $('#top-icon-tablet').fadeOut();
+          }
+      });
+
+      $('#top-icon-tablet').click(function(){
+          $('html, body').animate({scrollTop : 0}, 800);
+          return false;
+      });
+  });
+</script>
 {% if site.service_worker %}
 <script async>
   if ('serviceWorker' in navigator) {
