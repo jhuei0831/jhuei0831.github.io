@@ -497,20 +497,14 @@ figure {
 
 #top-icon-tablet {
     position: fixed;
-    right: 2rem;
+    right: 0.5rem;
     bottom: 2rem;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
     margin-left: 15px;
 }
 
 #top-icon-tablet:hover {
     color: #d44375;
-}
-
-@media (min-width: 62em) {
-    #top-icon-tablet {
-        display: none !important;
-    }
 }
 
 body {
