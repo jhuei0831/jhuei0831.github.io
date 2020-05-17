@@ -4,6 +4,11 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2020-05-17
+---
+**Added**
+* [Prism - Customize Code Highlighter](https://jhuei.com/prism-highlighter/) / Post
+
 ### 2020-05-16
 ---
 **Added**
