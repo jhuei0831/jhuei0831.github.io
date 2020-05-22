@@ -18,7 +18,7 @@ description: 頁面管理 - Page Manager
 
 ### 前言
 ---
-Hello 大家 ! 在 [第6篇](https://jhuei.com/laravel-myweb-7/) 創建了導覽列管理，而那時候將導覽列分成兩個類型，分別是 `導覽目錄` 以及 `一般頁面` 。
+Hello 大家 ! 在 [第6篇](https://jhuei.com/laravel-myweb-6/) 創建了導覽列管理，而那時候將導覽列分成兩個類型，分別是 `導覽目錄` 以及 `一般頁面` 。
 
 * 一般頁面 : 點擊後直接導向該頁面。
 * 導覽目錄 : 點擊後產生下拉式選單，內容為選單。
@@ -40,7 +40,7 @@ Hello 大家 ! 在 [第6篇](https://jhuei.com/laravel-myweb-7/) 創建了導覽
 * [結語](#end)
 
 {: id='cmm'}
-### 1. 新增Controller、Model、Migration [🔝](#top)
+### 1. 新增Controller、Model、Migration
 ---
 
 ```command
@@ -49,7 +49,7 @@ php artisan make:model Page -mcr
 ```
 
 {: id='migration'}
-### 2. 修改Migration [🔝](#top)
+### 2. 修改Migration
 ---
 
 ```php
@@ -90,7 +90,7 @@ php artisan migrate
 ```
 
 {: id='model'}
-### 3. 修改Model [🔝](#top)
+### 3. 修改Model
 ---
 
 ```php
@@ -113,7 +113,7 @@ class Page extends Model
 ```
 
 {: id='route'}
-### 4. 加入路由 [🔝](#top)
+### 4. 加入路由
 ---
 
 ```php
@@ -125,7 +125,7 @@ Route::prefix('manage')->middleware('auth','admin')->group(function(){
 ```
 
 {: id='view'}
-### 5. 建立視圖 [🔝](#top)
+### 5. 建立視圖
 ---
 
 ```treeview
@@ -143,7 +143,7 @@ views/
 ```
 
 {: id='manage'}
-### 6. 頁面管理 [🔝](#top)
+### 6. 頁面管理
 ---
 
 先建立頁面管理首頁 `index.blade.php` :
@@ -237,7 +237,7 @@ public function index()
 ```
 
 {: id='editor'}
-### 7. 加入編輯器 [🔝](#top)
+### 7. 加入編輯器
 ---
 
 在新增文章時需要使用編輯器輔助，可以使用像是 [Ckeditor](https://ckeditor.com/ckeditor-4/download/) 或 [TinyMCE](https://www.tiny.cloud/) 等等的編輯器。
@@ -254,7 +254,7 @@ public function index()
 ```
 
 {: id='create'}
-### 8. 頁面新增 [🔝](#top)
+### 8. 頁面新增
 ---
 
 `create.blade.php` :
@@ -402,7 +402,7 @@ public function store(Request $request)
 ```
 
 {: id='edit'}
-### 9. 頁面修改 [🔝](#top)
+### 9. 頁面修改
 ---
 
 `edit.blade.php` :
@@ -565,7 +565,7 @@ public function update(Request $request, $id)
 ```
 
 {: id='delete'}
-### 10. 頁面刪除 [🔝](#top)
+### 10. 頁面刪除
 ---
 
 `PageController.php` :
@@ -583,7 +583,7 @@ public function destroy($id)
 
 {: id='end'}
 
-### 11. 結語 [🔝](#top)
+### 11. 結語
 ---
 
 叮叮結束😁

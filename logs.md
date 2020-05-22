@@ -4,6 +4,11 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2020-05-22
+---
+**Added**
+* [Laravel Backend Control Website - 9](https://jhuei.com/laravel-myweb-9/) / Post
+
 ### 2020-05-17
 ---
 **Added**
