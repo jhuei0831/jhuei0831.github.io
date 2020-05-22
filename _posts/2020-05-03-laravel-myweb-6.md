@@ -14,7 +14,7 @@ tags:
 - backend
 - validation
 - request
-description: 導覽列管理 - Navbar Manage
+description: Laravel 導覽列管理 - Navbar Manage
 ---
 
 ### 前言

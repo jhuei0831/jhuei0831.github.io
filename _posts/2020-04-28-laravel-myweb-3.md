@@ -11,7 +11,7 @@ tags:
 - css
 - bootstrap
 - backend
-description: 路由、參數及按鈕設定 - Setting Routes、 Variables and Button
+description: Laravel 路由、參數及按鈕設定 - Setting Routes、 Variables and Button
 ---
 
 ### 前言

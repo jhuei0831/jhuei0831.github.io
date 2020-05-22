@@ -14,7 +14,7 @@ tags:
 - backend
 - request
 - JQuery
-description: 拖曳排序、視圖合成器 - Drag Sort、View Composer
+description: Laravel 拖曳排序、視圖合成器 - Drag Sort、View Composer
 ---
 
 ### 前言

@@ -13,7 +13,7 @@ tags:
 - bootstrap
 - backend
 - request
-description: 頁面管理 - Page Manager
+description: Laravel 頁面管理 - Page Manager
 ---
 
 ### 前言

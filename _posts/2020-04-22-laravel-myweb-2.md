@@ -2,7 +2,7 @@
 title: Laravel Backend Control Website - 2
 layout: post
 featured-img: 20200422-1
-description: 基本設置以及前後台公版 - Basic setup and template.
+description: Laravel 基本設置以及前後台公版 - Basic setup and template.
 categories:
 - CODE
 tags:

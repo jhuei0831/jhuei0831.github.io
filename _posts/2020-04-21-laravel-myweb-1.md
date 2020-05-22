@@ -2,7 +2,7 @@
 title: Laravel Backend Control Website  - 1
 layout: post
 featured-img: 20200421
-description: 網站設置和預計設計目標 - Website settings and expected design goals
+description: Laravel 網站設置和預計設計目標 - Website settings and expected design goals
 categories:
 - CODE
 tags:

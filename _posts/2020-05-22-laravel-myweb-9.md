@@ -12,7 +12,7 @@ tags:
 - request
 - XSS
 - htmlpurifier
-description: 頁面管理 - Page Manager
+description: Laravel XSS Defense by use Htmlpurifier
 ---
 
 ### 前言

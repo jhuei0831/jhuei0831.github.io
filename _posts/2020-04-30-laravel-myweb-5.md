@@ -13,7 +13,7 @@ tags:
 - middleware
 - request
 - validation
-description: 驗證、訊息、中介層  - Validation 、Message、Middleware
+description: Laravel 驗證、訊息、中介層  - Validation 、Message、Middleware
 ---
 
 ### 前言
