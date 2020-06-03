@@ -149,34 +149,34 @@ views/
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Log').__('Manage') }}</div>
+                <div class="card-header">{% raw %}{{ __('Log').__('Manage') }}{% endraw %}</div>
                 <div class="card-body">
 					<div class="table-responsive">
 						<table id="data" class="table table-hover table-bordered text-center">
 							<thead>
 								<tr class="table-info active">
-									<th class="text-nowrap text-center">{{ __('Member') }}</th>
-									<th class="text-nowrap text-center">{{ __('IP') }}</th>
-									<th class="text-nowrap text-center">{{ __('Browser') }}</th>
-									<th class="text-nowrap text-center">{{ __('Action') }}</th>
-									<th class="text-nowrap text-center">{{ __('Table') }}</th>
-									<th class="text-nowrap text-center">{{ __('Created_at') }}</th>
+									<th class="text-nowrap text-center">{% raw %}{{ __('Member') }}{% endraw %}</th>
+									<th class="text-nowrap text-center">{% raw %}{{ __('IP') }}{% endraw %}</th>
+									<th class="text-nowrap text-center">{% raw %}{{ __('Browser') }}{% endraw %}</th>
+									<th class="text-nowrap text-center">{% raw %}{{ __('Action') }}{% endraw %}</th>
+									<th class="text-nowrap text-center">{% raw %}{{ __('Table') }}{% endraw %}</th>
+									<th class="text-nowrap text-center">{% raw %}{{ __('Created_at') }}{% endraw %}</th>
 									<th class="text-nowrap text-center">*</th>
 								</tr>
 							</thead>
 							<tbody>
 								@foreach ($logs as $log)
 									<tr>
-										<td>{{ $log->user }}</td>
-										<td>{{ $log->ip }}</td>
-										<td>{{ $log->browser }}</td>
-										<td>{{ $log->action }}</td>
-										<td>{{ $log->table }}</td>
-										<td>{{ $log->created_at }}</td>
+										<td>{% raw %}{{ $log->user }}{% endraw %}</td>
+										<td>{% raw %}{{ $log->ip }}{% endraw %}</td>
+										<td>{% raw %}{{ $log->browser }}{% endraw %}</td>
+										<td>{% raw %}{{ $log->action }}{% endraw %}</td>
+										<td>{% raw %}{{ $log->table }}{% endraw %}</td>
+										<td>{% raw %}{{ $log->created_at }}{% endraw %}</td>
 										<td>
-											<form action="{{ route('log.show',$log->id) }}" method="GET">
+											<form action="{% raw %}{{ route('log.show',$log->id) }}{% endraw %}" method="GET">
 											@csrf
-											{{ App\Button::detail($log->id) }}
+											{% raw %}{{ App\Button::detail($log->id) }}{% endraw %}
 											</form>
 										</td>
 									</tr>
@@ -446,55 +446,55 @@ public function show($id)
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Log').__('Detail') }}</div>               
+                <div class="card-header">{% raw %}{{ __('Log').__('Detail') }}{% endraw %}</div>               
                 <div class="card-body">
                 	<ul class="list-unstyled">
-						<li>{{ App\Button::GoBack(route('log.index')) }}</li>
+						<li>{% raw %}{{ App\Button::GoBack(route('log.index')) }}{% endraw %}</li>
 					</ul>
 					<div class="table-responsive">					
 						<table class="table table-hover table-bordered">
 							<thead>
 								<tr class="table-info active">
-									<th class="text-nowrap text-center">{{ __('Item') }}</th>
-									<th class="text-nowrap text-center">{{ __('Data') }}</th>              			
+									<th class="text-nowrap text-center">{% raw %}{{ __('Item') }}{% endraw %}</th>
+									<th class="text-nowrap text-center">{% raw %}{{ __('Data') }}{% endraw %}</th>              			
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>{{ __('Member') }}</td>
-									<td>{{ $log->user }}</td>
+									<td>{% raw %}{{ __('Member') }}{% endraw %}</td>
+									<td>{% raw %}{{ $log->user }}{% endraw %}</td>
 								</tr>
 								<tr>
-									<td>{{ __('IP') }}</td>
-									<td>{{ $log->ip }}</td>
+									<td>{% raw %}{{ __('IP') }}{% endraw %}</td>
+									<td>{% raw %}{{ $log->ip }}{% endraw %}</td>
 								</tr>
 								<tr>
-									<td>{{ __('Operating system') }}</td>
-									<td>{{ $log->os }}</td>
+									<td>{% raw %}{{ __('Operating system') }}{% endraw %}</td>
+									<td>{% raw %}{{ $log->os }}{% endraw %}</td>
 								</tr>
 								<tr>
-									<td>{{ __('Browser') }}</td>
-									<td>{{ $log->browser }}</td>
+									<td>{% raw %}{{ __('Browser') }}{% endraw %}</td>
+									<td>{% raw %}{{ $log->browser }}{% endraw %}</td>
 								</tr>
 								<tr>
-									<td>{{ __('Browser').__('Detail') }}</td>
-									<td>{{ $log->browser_detail }}</td>
+									<td>{% raw %}{{ __('Browser').__('Detail') }}{% endraw %}</td>
+									<td>{% raw %}{{ $log->browser_detail }}{% endraw %}</td>
 								</tr>
 								<tr>
-									<td>{{ __('Action') }}</td>
-									<td>{{ $log->action }}</td>
+									<td>{% raw %}{{ __('Action') }}{% endraw %}</td>
+									<td>{% raw %}{{ $log->action }}{% endraw %}</td>
 								</tr>
 								<tr>
-									<td>{{ __('Table') }}</td>
-									<td>{{ $log->table }}</td>
+									<td>{% raw %}{{ __('Table') }}{% endraw %}</td>
+									<td>{% raw %}{{ $log->table }}{% endraw %}</td>
 								</tr>
 								<tr>
-									<td>{{ __('Data') }}</td>
-									<td><pre>{{ $log->data }}</pre></td>
+									<td>{% raw %}{{ __('Data') }}{% endraw %}</td>
+									<td><pre>{% raw %}{{ $log->data }}{% endraw %}</pre></td>
 								</tr>
 								<tr>
-									<td>{{ __('Created_at') }}</td>
-									<td>{{ $log->created_at }}</td>
+									<td>{% raw %}{{ __('Created_at') }}{% endraw %}</td>
+									<td>{% raw %}{{ $log->created_at }}{% endraw %}</td>
 								</tr>
 							</tbody>
 						</table>
