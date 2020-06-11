@@ -71,7 +71,6 @@ class CreatePagesTable extends Migration
             $table->string('url')->comment('頁面網址');
             $table->longText('content')->nullable()->comment('頁面內容');
             $table->boolean('is_open')->default(true)->comment('是否開放');
-            $table->boolean('is_slide')->default(true)->comment('是否輪播');
             $table->timestamps();
         });
     }
@@ -174,7 +173,6 @@ views/
                                     <th class="text-nowrap text-center">{% raw %}{{ trans('Title') }}{% endraw %}</th>
                                     <th class="text-nowrap text-center">{% raw %}{{ trans('Page').trans('Url') }}{% endraw %}</th>
                                     <th class="text-nowrap text-center">{% raw %}{{ trans('Is_open') }}{% endraw %}</th>
-                                    <th class="text-nowrap text-center">{% raw %}{{ trans('Is_slide') }}{% endraw %}</th>
                                     <th class="text-nowrap text-center">{% raw %}{{ trans('Action') }}{% endraw %}</th>
                                 </tr>
                             </thead>
@@ -188,9 +186,6 @@ views/
                                         </td>
                                         <td>
                                             <font color="{% raw %}{{App\Enum::is_open['color'][$page->is_open]}}{% endraw %}"><i class="fas fa-{% raw %}{{App\Enum::is_open['label'][$page->is_open]}}{% endraw %}"></i></font>
-                                        </td>
-                                        <td>
-                                            <font color="{% raw %}{{App\Enum::is_open['color'][$page->is_slide]}}{% endraw %}"><i class="fas fa-{% raw %}{{App\Enum::is_open['label'][$page->is_slide]}}{% endraw %}"></i></font>
                                         </td>
                                         <td>
                                             <form action="{% raw %}{{ route('page.edit',$page->id) }}{% endraw %}" method="GET">
@@ -315,19 +310,6 @@ public function index()
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="is_slide" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Is_slide') }}{% endraw %}</label>
-                            <div class="form-inline col-md-6">
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input class="custom-control-input" type="radio" name="is_slide" id="is_slide1" value="1">
-                                    <label class="custom-control-label" for="is_slide1">{% raw %}{{ trans('Yes') }}{% endraw %}</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input class="custom-control-input" type="radio" name="is_slide" id="is_slide2" value="0">
-                                    <label class="custom-control-label" for="is_slide2">{% raw %}{{ trans('No') }}{% endraw %}</label>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="card-footer text-center">
                         <input type="submit" class="btn btn-primary" value="{% raw %}{{ trans('Create') }}{% endraw %}">
@@ -373,7 +355,6 @@ public function store(Request $request)
         'title' => ['required', 'string', 'max:255'],
         'url' => ['required', 'string', 'max:255','unique:pages,url'],
         'is_open' => ['required'],
-        'is_slide' => ['required'],
     ]);
 
     foreach ($request->except('_token', '_method', 'files') as $key => $value) {
@@ -476,20 +457,6 @@ public function store(Request $request)
                         </div>
 
                         <div class="form-group row">
-                            <label for="is_slide" class="col-md-4 col-form-label text-md-right">{% raw %}{{ trans('Is_slide') }}{% endraw %}</label>
-                            <div class="form-inline col-md-6">
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input class="custom-control-input" type="radio" name="is_slide" id="is_slide1" value="1" {% raw %}{{ ($page->is_slide=="1")? "checked" : "" }}{% endraw %}>
-                                    <label class="custom-control-label" for="is_slide1">{% raw %}{{ trans('Yes') }}{% endraw %}</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input class="custom-control-input" type="radio" name="is_slide" id="is_slide2" value="0" {% raw %}{{ ($page->is_slide=="0")? "checked" : "" }}{% endraw %}>
-                                    <label class="custom-control-label" for="is_slide2">{% raw %}{{ trans('No') }}{% endraw %}</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
 			                <div class="col-md-4">
 			                    <input type="submit" class="btn btn-primary" value="送出">
 			                </div>
@@ -537,7 +504,6 @@ public function update(Request $request, $id)
         'title' => ['required', 'string', 'max:255'],
         'url' => ['required', 'string', 'max:255'],
         'is_open' => ['required'],
-        'is_slide' => ['required'],
     ]);
 
     foreach ($request->except('_token','_method','files') as $key => $value) {

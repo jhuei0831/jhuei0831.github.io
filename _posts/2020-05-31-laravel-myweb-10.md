@@ -448,61 +448,61 @@ public function show($id)
             <div class="card">
                 <div class="card-header">{% raw %}{{ __('Log').__('Detail') }}{% endraw %}</div>               
                 <div class="card-body">
-                	<ul class="list-unstyled">
-						<li>{% raw %}{{ App\Button::GoBack(route('log.index')) }}{% endraw %}</li>
-					</ul>
-					<div class="table-responsive">					
-						<table class="table table-hover table-bordered">
-							<thead>
-								<tr class="table-info active">
-									<th class="text-nowrap text-center">{% raw %}{{ __('Item') }}{% endraw %}</th>
-									<th class="text-nowrap text-center">{% raw %}{{ __('Data') }}{% endraw %}</th>              			
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>{% raw %}{{ __('Member') }}{% endraw %}</td>
-									<td>{% raw %}{{ $log->user }}{% endraw %}</td>
-								</tr>
-								<tr>
-									<td>{% raw %}{{ __('IP') }}{% endraw %}</td>
-									<td>{% raw %}{{ $log->ip }}{% endraw %}</td>
-								</tr>
-								<tr>
-									<td>{% raw %}{{ __('Operating system') }}{% endraw %}</td>
-									<td>{% raw %}{{ $log->os }}{% endraw %}</td>
-								</tr>
-								<tr>
-									<td>{% raw %}{{ __('Browser') }}{% endraw %}</td>
-									<td>{% raw %}{{ $log->browser }}{% endraw %}</td>
-								</tr>
-								<tr>
-									<td>{% raw %}{{ __('Browser').__('Detail') }}{% endraw %}</td>
-									<td>{% raw %}{{ $log->browser_detail }}{% endraw %}</td>
-								</tr>
-								<tr>
-									<td>{% raw %}{{ __('Action') }}{% endraw %}</td>
-									<td>{% raw %}{{ $log->action }}{% endraw %}</td>
-								</tr>
-								<tr>
-									<td>{% raw %}{{ __('Table') }}{% endraw %}</td>
-									<td>{% raw %}{{ $log->table }}{% endraw %}</td>
-								</tr>
-								<tr>
-									<td>{% raw %}{{ __('Data') }}{% endraw %}</td>
-									<td><pre>{% raw %}{{ $log->data }}{% endraw %}</pre></td>
-								</tr>
-								<tr>
-									<td>{% raw %}{{ __('Created_at') }}{% endraw %}</td>
-									<td>{% raw %}{{ $log->created_at }}{% endraw %}</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+                    <ul class="list-unstyled">
+                        <li>{% raw %}{{ App\Button::GoBack(route('log.index')) }}{% endraw %}</li>
+                    </ul>
+                    <div class="table-responsive">					
+                        <table class="table table-hover table-bordered">
+                            <thead>
+                                <tr class="table-info active">
+                                    <th class="text-nowrap text-center">{% raw %}{{ __('Item') }}{% endraw %}</th>
+                                    <th class="text-nowrap text-center">{% raw %}{{ __('Data') }}{% endraw %}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{% raw %}{{ __('Member') }}{% endraw %}</td>
+                                    <td>{% raw %}{{ $log->user }}{% endraw %}</td>
+                                </tr>
+                                <tr>
+                                    <td>{% raw %}{{ __('IP') }}{% endraw %}</td>
+                                    <td>{% raw %}{{ $log->ip }}{% endraw %}</td>
+                                </tr>
+                                <tr>
+                                    <td>{% raw %}{{ __('Operating system') }}{% endraw %}</td>
+                                    <td>{% raw %}{{ $log->os }}{% endraw %}</td>
+                                </tr>
+                                <tr>
+                                    <td>{% raw %}{{ __('Browser') }}{% endraw %}</td>
+                                    <td>{% raw %}{{ $log->browser }}{% endraw %}</td>
+                                </tr>
+                                <tr>
+                                    <td>{% raw %}{{ __('Browser').__('Detail') }}{% endraw %}</td>
+                                    <td>{% raw %}{{ $log->browser_detail }}{% endraw %}</td>
+                                </tr>
+                                <tr>
+                                    <td>{% raw %}{{ __('Action') }}{% endraw %}</td>
+                                    <td>{% raw %}{{ $log->action }}{% endraw %}</td>
+                                </tr>
+                                <tr>
+                                    <td>{% raw %}{{ __('Table') }}{% endraw %}</td>
+                                    <td>{% raw %}{{ $log->table }}{% endraw %}</td>
+                                </tr>
+                                <tr>
+                                    <td>{% raw %}{{ __('Data') }}{% endraw %}</td>
+                                    <td><pre>{% raw %}{{ $log->data }}{% endraw %}</pre></td>
+                                </tr>
+                                <tr>
+                                    <td>{% raw %}{{ __('Created_at') }}{% endraw %}</td>
+                                    <td>{% raw %}{{ $log->created_at }}{% endraw %}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="card-footer">
 
-				</div>
+                </div>
             </div>
         </div>
     </div>

@@ -537,13 +537,7 @@ View::composer(['*'], function ($view) {
                                 {% raw %}{{ $navbar->name }}{% endraw %}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                @foreach ($menus as $menu)
-                                    @if ($menu->navbar_id == $navbar->id && $menu->link)
-                                        <a class="dropdown-item" target="_blank" href="{% raw %}{{ $menu->link }}{% endraw %}">{% raw %}{{ $menu->name }}{% endraw %}</a>
-                                    @elseif($menu->navbar_id == $navbar->id)
-                                        <a class="dropdown-item" href="/article/{% raw %}{{ $navbar->name }}{% endraw %}/{% raw %}{{ $menu->name }}{% endraw %}">{% raw %}{{ $menu->name }}{% endraw %}</a>
-                                    @endif
-                                @endforeach
+                                <!-- 期待第12篇 -->
                                 </div>
                             </li>
                             @break
