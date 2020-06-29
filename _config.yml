@@ -76,7 +76,7 @@ exclude:
   - sleek.jpg
 
 include: ['_pages']
-permalink: /:title/
+permalink: /:year/:month/
 # permalink: /:year/:month/:title.html
 
 jekyll-archives:
@@ -93,11 +93,12 @@ jekyll-archives:
 pagination:
   enabled: true
   per_page: 6
-  permalink: '/page:num/'
   title: ' - page :num'
-  limit: 0
   sort_field: 'date'
   sort_reverse: true
+  trail:
+    before: 2
+    after: 2
 
 compress_html:
   clippings: all

@@ -4,6 +4,11 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2020-06-28
+---
+**Added**
+* [Laravel Zip](https://jhuei.com/laravel-zip/) / Post
+
 ### 2020-06-11
 ---
 **Added**
