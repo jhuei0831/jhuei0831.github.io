@@ -76,7 +76,7 @@ exclude:
   - sleek.jpg
 
 include: ['_pages']
-permalink: /:year/:month/
+# permalink: /:year/:month/:day/:title.html
 # permalink: /:year/:month/:title.html
 
 jekyll-archives:
@@ -90,15 +90,17 @@ jekyll-archives:
     category: '/category/:name/'
 
 # Pagination Settings
-pagination:
-  enabled: true
-  per_page: 6
-  title: ' - page :num'
-  sort_field: 'date'
-  sort_reverse: true
-  trail:
-    before: 2
-    after: 2
+# pagination:
+#   enabled: true
+#   per_page: 6
+#   title: ' - page :num'
+#   sort_field: 'date'
+#   sort_reverse: true
+#   trail:
+#     before: 2
+#     after: 2
+paginate: 6
+paginate_path: "/page:num/"
 
 compress_html:
   clippings: all
@@ -114,7 +116,7 @@ jekyll_admin:
 
 plugins:
   - jekyll-archives
-  - jekyll-paginate-v2
+  - jekyll-paginate
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag

@@ -19,28 +19,31 @@ description: 壓縮下載 - Zip Download
 
 ### 本篇重點
 ---
-* View
-* Route
-* Controller
-* Reference
+* [View](#view)
+* [Route](#route)
+* [Controller](#controller)
+* [Reference](#reference)
 
+
+{: id='view'}
 ### 1. View
 ---
 `zip.blade.php` :
 
 ```html
-<form action="{{ route('zip.download') }}" method="post">
+<form action="{% raw %}{{ route('zip.download') }}{% endraw %}" method="post">
     @csrf
     <select name="folder">
         <option value="">請選擇</option>
         @foreach ($folders as $folder)
-            <option>{{ $folder }}</option>
+            <option>{% raw %}{{ $folder }}{% endraw %}</option>
         @endforeach
     </select>
     <button type="submit">Submit</button>
 </form>
 ```
 
+{: id='route'}
 ### 2. Route
 ---
 `web.php` :
@@ -50,6 +53,7 @@ Route::get('zip', 'ZipController@index')->name('zip');
 Route::post('zip/download', 'ZipController@zip')->name('zip.download');
 ```
 
+{: id='controller'}
 ### 3. Controller
 ---
 `ZipController.php` :
@@ -89,6 +93,7 @@ public function zip(Request $request)
 
 `zip()` 在 18~21 行中，將選取資料夾內的檔案逐一加到壓縮檔中。
 
+{: id='reference'}
 ### 4. Reference
 ---
 

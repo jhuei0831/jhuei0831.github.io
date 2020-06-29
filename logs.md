@@ -9,6 +9,9 @@ permalink: "/logs/"
 **Added**
 * [Laravel Zip](https://jhuei.com/laravel-zip/) / Post
 
+**Fixed**
+* Paginate
+
 ### 2020-06-11
 ---
 **Added**
