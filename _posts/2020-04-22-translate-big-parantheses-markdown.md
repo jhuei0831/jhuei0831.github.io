@@ -17,7 +17,7 @@ description: 如何在markdown中顯示雙大括號 - How to translate double bi
 
 ### 解決
 <hr> 
-```{% assign openTag = '{%' %}  
+```php {% assign openTag = '{%' %}  
 {{ openTag }} raw %}      
 {% raw %}
   {{ 加入raw即可 }}

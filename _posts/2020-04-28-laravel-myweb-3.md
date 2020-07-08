@@ -53,7 +53,7 @@ Route::get('/manage', function () {return view('manage.index');})->name('manage'
 ### 2. 參數
 ---
 
-有時候，在不同的頁面都會用到相同字串，比如說 [下一篇](https://jhuei.com/laravel-myweb-4/) 的會員管理，就會使用到權限的設定(新增、修改、刪除)。
+有時候，在不同的頁面都會用到相同字串，比如說 [下一篇](https://jhuei.com/code/2020/04/29/laravel-myweb-4.html) 的會員管理，就會使用到權限的設定(新增、修改、刪除)。
 
 如果多個頁面都要使用，何不先定義，之後再引入即可。在`./app` 底下建立 `Enum.php` 作為放參數的地方，並直接在裡面加上 :
 

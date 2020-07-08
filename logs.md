@@ -7,7 +7,7 @@ permalink: "/logs/"
 ### 2020-06-28
 ---
 **Added**
-* [Laravel Zip](https://jhuei.com/laravel-zip/) / Post
+* [Laravel Zip](https://jhuei.com/code/2020/06/28/laravel-zip.html) / Post
 
 **Fixed**
 * Paginate
@@ -15,28 +15,28 @@ permalink: "/logs/"
 ### 2020-06-11
 ---
 **Added**
-* [Laravel Backend Control Website - 12](https://jhuei.com/laravel-myweb-12/) / Post
+* [Laravel Backend Control Website - 12](https://jhuei.com/code/2020/06/11/laravel-myweb-12.html) / Post
 
 ### 2020-06-10
 ---
 **Added**
-* [Laravel Backend Control Website - 11](https://jhuei.com/laravel-myweb-11/) / Post
+* [Laravel Backend Control Website - 11](https://jhuei.com/code/2020/06/10/laravel-myweb-11.html) / Post
 
 
 ### 2020-05-31
 ---
 **Added**
-* [Laravel Backend Control Website - 10](https://jhuei.com/laravel-myweb-10/) / Post
+* [Laravel Backend Control Website - 10](https://jhuei.com/code/2020/05/31/laravel-myweb-10.html) / Post
 
 ### 2020-05-22
 ---
 **Added**
-* [Laravel Backend Control Website - 9](https://jhuei.com/laravel-myweb-9/) / Post
+* [Laravel Backend Control Website - 9](https://jhuei.com/code/2020/05/17/prism-highlighter.html) / Post
 
 ### 2020-05-17
 ---
 **Added**
-* [Prism - Customize Code Highlighter](https://jhuei.com/prism-highlighter/) / Post
+* [Prism - Customize Code Highlighter](https://jhuei.com/code/2020/05/13/long-polling-example.html) / Post
 
 ### 2020-05-16
 ---
@@ -49,18 +49,18 @@ permalink: "/logs/"
 ### 2020-05-13
 ---
 **Added**
-* [Long Polling Database Example](https://jhuei.com/long-polling-example/) / Post
+* [Long Polling Database Example](https://jhuei.com/code/2020/05/12/long-polling.html) / Post
 
 ### 2020-05-12
 ---
 **Added**
-* [Long Polling](https://jhuei.com/long-polling/) / Post
+* [Long Polling](https://jhuei.com/code/2020/05/12/long-polling.html) / Post
 
 
 ### 2020-05-10
 ---
 **Added**
-* [Laravel Backend Control Website - 8](https://jhuei.com/laravel-myweb-8/) / Post
+* [Laravel Backend Control Website - 8](https://jhuei.com/code/2020/05/10/laravel-myweb-8.html) / Post
 * Toc
 
 ### 2020-05-07
@@ -71,7 +71,7 @@ permalink: "/logs/"
 ### 2020-05-06
 ---
 **Added**
-* [Install Swoole on Windows](https://jhuei.com/swoole-install-on-windows/) / Post
+* [Install Swoole on Windows](https://jhuei.com/execution/2020/05/06/swoole-install-on-windows.html) / Post
 
 **Fixed**
 * Search description
@@ -79,17 +79,17 @@ permalink: "/logs/"
 ### 2020-05-05
 ---
 **Added**
-* [Laravel Backend Control Website - 7](https://jhuei.com/laravel-myweb-7/) / Post
+* [Laravel Backend Control Website - 7](https://jhuei.com/code/2020/05/05/laravel-myweb-7.html) / Post
 
 ### 2020-05-03
 ---
 **Added**
-* [Laravel Backend Control Website - 6](https://jhuei.com/laravel-myweb-6/) / Post
+* [Laravel Backend Control Website - 6](https://jhuei.com/code/2020/05/03/laravel-myweb-6.html) / Post
 
 ### 2020-04-30
 ---
 **Added**
-* [Laravel Backend Control Website - 5](https://jhuei.com/laravel-myweb-5/) / Post
+* [Laravel Backend Control Website - 5](https://jhuei.com/code/2020/04/30/laravel-myweb-5.html) / Post
 
 **Fixed**
 * 文章錯字及字元未顯示
@@ -100,12 +100,12 @@ permalink: "/logs/"
 ### 2020-04-29
 ---
 **Added**
-* [Laravel Backend Control Website - 4](https://jhuei.com/laravel-myweb-4/) / Post
+* [Laravel Backend Control Website - 4](https://jhuei.com/code/2020/04/29/laravel-myweb-4.html) / Post
 
 ### 2020-04-28
 ---
 **Added**
-* [Laravel Backend Control Website - 3](https://jhuei.com/laravel-myweb-3/) / Post
+* [Laravel Backend Control Website - 3](https://jhuei.com/code/2020/04/28/laravel-myweb-3.html) / Post
 
 ### 2020-04-26
 ---

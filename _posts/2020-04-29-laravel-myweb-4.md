@@ -16,7 +16,7 @@ description: Laravel 會員管理 / CRUD - Laravel member system / CRUD
 
 ### 前言
 ---
-[第二篇](https://jhuei.com/laravel-myweb-2/)提到將layout切成前後台，這次就要來製作會員系統，並且設定不同的權限。
+[第二篇](https://jhuei.com/code/2020/04/22/laravel-myweb-2.html)提到將layout切成前後台，這次就要來製作會員系統，並且設定不同的權限。
 
 ### 本篇重點
 ---

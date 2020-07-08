@@ -18,7 +18,7 @@ description: Laravel XSS Defense by use Htmlpurifier
 ### 前言
 ---
  
-在 [第8篇](https://jhuei.com/laravel-myweb-8/) 中的結尾提到為什麼要把儲存寫的比較複雜，這是因為要防止 [XSS](https://en.wikipedia.org/wiki/Cross-site_scripting) 的攻擊。
+在 [第八篇](https://jhuei.com/code/2020/05/10/laravel-myweb-8.html) 中的結尾提到為什麼要把儲存寫的比較複雜，這是因為要防止 [XSS](https://en.wikipedia.org/wiki/Cross-site_scripting) 的攻擊。
  
 這篇就講如何在 `Controller` 中防禦 `XSS` 。
  

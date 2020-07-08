@@ -18,7 +18,7 @@ description: Laravel 頁面管理 - Page Manager
 
 ### 前言
 ---
-Hello 大家 ! 在 [第6篇](https://jhuei.com/laravel-myweb-6/) 創建了導覽列管理，而那時候將導覽列分成兩個類型，分別是 `導覽目錄` 以及 `一般頁面` 。
+Hello 大家 ! 在 [第六篇](https://jhuei.com/code/2020/05/03/laravel-myweb-6.html) 創建了導覽列管理，而那時候將導覽列分成兩個類型，分別是 `導覽目錄` 以及 `一般頁面` 。
 
 * 一般頁面 : 點擊後直接導向該頁面。
 * 導覽目錄 : 點擊後產生下拉式選單，內容為選單。

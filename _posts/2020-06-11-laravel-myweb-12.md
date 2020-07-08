@@ -18,7 +18,7 @@ description: 選單管理 - Menu Manage
 
 ### 前言
 ---
-[上一篇](https://jhuei.com/laravel-myweb-11/) 新增了選單管理，這篇就是要將 `導覽列`、`選單`及 `頁面` 三者串連起來。
+[上一篇](https://jhuei.com/code/2020/06/10/laravel-myweb-11.html) 新增了選單管理，這篇就是要將 `導覽列`、`選單`及 `頁面` 三者串連起來。
 
 ### 本篇重點
 ---

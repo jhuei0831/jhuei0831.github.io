@@ -19,7 +19,7 @@ description: Laravel 拖曳排序、視圖合成器 - Drag Sort、View Composer
 
 ### 前言
 ---
-Hello 大家 ! 在 [上一篇](https://jhuei.com/laravel-myweb-6/) 提到了視圖合成器(View Composer)以及如何利用拖曳來進行導覽列的排序，這篇就來一一解答。
+Hello 大家 ! 在 [上一篇](https://jhuei.com/code/2020/05/03/laravel-myweb-6.html) 提到了視圖合成器(View Composer)以及如何利用拖曳來進行導覽列的排序，這篇就來一一解答。
 
 ### 本篇重點
 ---

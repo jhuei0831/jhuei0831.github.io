@@ -18,7 +18,7 @@ description: Laravel 驗證、訊息、中介層  - Validation 、Message、Midd
 
 ### 前言
 ---
-[第四篇](https://jhuei.com/laravel-myweb-4/) 建立了會員系統，但其中有些東西並沒有交代的很清楚。
+[第四篇](https://jhuei.com/code/2020/04/29/laravel-myweb-4.html) 建立了會員系統，但其中有些東西並沒有交代的很清楚。
 
 比如 `資料驗證`、`新增、修改、刪除後的訊息`以及 `權限`的利用，這篇將盡可能的解釋。<br><br>
 ### 本篇重點
@@ -32,7 +32,7 @@ description: Laravel 驗證、訊息、中介層  - Validation 、Message、Midd
 {: id='data'}
 ### 1. 資料送出後的訊息 [🔝](#top)
 ---
-在 [第四篇](https://jhuei.com/laravel-myweb-4/) 可以看到儲存或刪除資料後都會有 :
+在 [第四篇](https://jhuei.com/code/2020/04/29/laravel-myweb-4.html) 可以看到儲存或刪除資料後都會有 :
 
 ```php
 return back()->with('success','會員新增成功 !');
@@ -167,7 +167,7 @@ $data = $request->validate([
 {: id='example'}
 ### 3. 權限的使用例子 [🔝](#top)
 ---
-既然 [第四篇](https://jhuei.com/laravel-myweb-4/) 建立了會員帳號的權限，以下就提出一些使用的例子。
+既然 [第四篇](https://jhuei.com/code/2020/04/29/laravel-myweb-4.html) 建立了會員帳號的權限，以下就提出一些使用的例子。
 
 比如我們規定 `權限大於0` 才能進入後台，這裡就要提到一下 [中介層 / middleware](https://laravel.com/docs/5.8/middleware)。
 
