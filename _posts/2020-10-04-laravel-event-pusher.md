@@ -10,6 +10,7 @@ tags:
 - laravel
 - pusher
 - event
+description: 使用Pusher在Laravel的事件中做出廣播功能
 ---
 
 ### 前言
