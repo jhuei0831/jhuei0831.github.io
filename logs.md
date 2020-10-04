@@ -4,6 +4,11 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2020-10-04
+---
+**Added**
+* [Laravel Event - Pusher](https://jhuei.com/code/2020/10/04/laravel-event-pusher.html) / Post
+
 ### 2020-06-28
 ---
 **Added**
