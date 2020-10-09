@@ -4,6 +4,11 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2020-10-09
+---
+**Added**
+* [PHP cURL API (POST & GET)](https://jhuei.com/code/2020/10/09/php-curl-api.html) / Post
+
 ### 2020-10-04
 ---
 **Added**
