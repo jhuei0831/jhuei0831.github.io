@@ -8,7 +8,7 @@ tags:
 - php
 - curl
 - api
-description: 使用Pusher在Laravel的事件中做出廣播功能
+description: 使用cURL去接別人的API
 ---
 
 ### 前言
