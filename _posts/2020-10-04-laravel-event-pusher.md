@@ -20,8 +20,11 @@ description: 使用Pusher在Laravel的事件中做出廣播功能
 ### 本篇重點
 ---
 * [Pusher](https://pusher.com/)
+* [建立事件](#event)
+* [事件傳送](#notice)
 
 
+{: id='event'}
 ### 1. Pusher
 ---
 到Pusher官網建立帳號後，建立一個`Channel`:
@@ -92,7 +95,9 @@ class TestPusher implements ShouldBroadcast
 }
 ```
 
-### 事件傳送
+
+{: id='notice'}
+### 3. 事件傳送
 ---
 
 在`views`底下建立視圖`pusher.blade.php`，code為pusher `Getting Started` 的STEP 1。

@@ -17,16 +17,20 @@ description: 使用cURL去接別人的API
 
 ### 本篇重點
 ---
- * cURL
- * POST
- * GET
+ * [cURL](#cURL)
+ * [POST](#POST)
+ * [GET](#GET)
+ 
 
+{: id='cURL'}
 ### 1. cURL
 ---
 [https://www.php.net/manual/en/book.curl.php](https://www.php.net/manual/en/book.curl.php)
 
 使用cURL支援HTTP Authorization 、POST的特性去接別人的API
 
+
+{: id='POST'}
 ### 2. POST
 ---
 
@@ -54,6 +58,8 @@ curl_close($ch);
 
 可以根據回傳的資料再去做處理。
 
+
+{: id='GET'}
 ### 3. GET
 ---
 
