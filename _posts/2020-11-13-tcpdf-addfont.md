@@ -22,7 +22,7 @@ $fontname = $pdf->addTTFfont('/path-to-font/DejaVuSans.ttf', 'TrueTypeUnicode', 
 ```
 會發現在使用`Adobe Acrobat Reader DC` 打開檔案時會出現以下錯誤訊息:
 
-[![font](https://i.imgur.com/CrYzlub.png)](https://i.imgur.com/CrYzlub.png)
+[![font](https://i.imgur.com/CrYzlub.png)](https://i.imgur.com/CrYzlub.png){:target="_blank"}
 
 然後你的字就沒辦法顯示，可是在網頁上打開PDF檔案又可以😱😱
 
