@@ -4,6 +4,12 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2020-11-13
+---
+**Added**
+* [TCPDF addTTFfont Problem](https://jhuei.com/code/2020/11/13/tcpdf-addfont.html) / Post
+
+
 ### 2020-10-21
 ---
 **Added**
