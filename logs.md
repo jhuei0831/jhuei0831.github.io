@@ -4,6 +4,12 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2021-01-11
+---
+**Added**
+* [Set Up XAMPP Laravel in Ali ECS](https://jhuei.com/code/2021/01/11/Set-Up-Xampp-Laravel-In-Ali-ECS.html) / Post
+
+
 ### 2020-11-13
 ---
 **Added**
