@@ -135,3 +135,10 @@ cd /專案名稱
 sudo chmod -R 775 storage
 sudo chmod -R 775 bootstrap/cache
 ```
+
+參考資料:
+
+1. https://www.cnblogs.com/jeacy/p/7132394.html
+2. https://askubuntu.com/questions/563972/how-to-link-to-php-from-xampp-installation-so-i-can-just-use-php-command-instead
+3. https://github.com/composer/composer/issues/5510
+4. https://stackoverflow.com/questions/52178033/the-stream-or-file-laravel-log-could-not-be-opened-failed-to-open-stream-pe
