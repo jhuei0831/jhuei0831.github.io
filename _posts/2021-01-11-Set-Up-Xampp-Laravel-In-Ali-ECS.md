@@ -56,7 +56,7 @@ curl -L http://localhost
 
 先安裝 `composer`
 
-```
+```cmd
 apt install composer
 ```
 
@@ -64,7 +64,7 @@ apt install composer
 
 設定資料夾權限:
 
-```
+```cmd
 cd /專案名稱
 sudo chmod -R 775 storage
 sudo chmod -R 775 bootstrap/cache
@@ -74,7 +74,7 @@ sudo chmod -R 775 bootstrap/cache
 
 打開 `/opt/lampp/etc/extra/httpd-vhosts.conf`中加入:
 
-```
+```cmd
 <VirtualHost /專案名稱:80>
     DocumentRoot "/opt/lampp/htdocs/專案名稱/public"
     ServerAdmin Admin
@@ -89,7 +89,7 @@ sudo chmod -R 775 bootstrap/cache
 
 儲存後重啟apache:
 
-```
+```cmd
 /opt/lampp/lampp restart
 ```
 
@@ -105,13 +105,13 @@ sudo chmod -R 775 bootstrap/cache
 
 執行指令:
 
-```
+```cmd
 sudo ln -s /opt/lampp/bin/php /usr/bin/php
 ```
 
 如果出現錯誤 `failed to create symbolic link '/usr/bin/php': File exists`，就執行指令
 
-```
+```cmd
 sudo rm /usr/bin/php
 sudo ln -s /opt/lampp/bin/php /usr/bin/php
 ```
@@ -122,7 +122,7 @@ sudo ln -s /opt/lampp/bin/php /usr/bin/php
 
 執行指令:
 
-```
+```cmd
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin --filename=composer
 ```
 
@@ -130,7 +130,7 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin 
 
 設定資料夾權限:
 
-```
+```cmd
 cd /專案名稱
 sudo chmod -R 775 storage
 sudo chmod -R 775 bootstrap/cache
