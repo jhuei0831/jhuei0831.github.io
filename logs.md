@@ -4,6 +4,11 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2022-04-30
+---
+**Added**
+* [Web Vulnerability Prevent](https://jhuei.com/code/2022/04/30/web-vulnerability-prevent.html) / Post
+
 ### 2021-01-11
 ---
 **Added**
