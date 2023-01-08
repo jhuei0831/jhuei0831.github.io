@@ -124,3 +124,5 @@ Route::get('/pusher_test', function () {
 ```
 
 打開兩個分頁 `/pusher` 和 `/pusher_test` ，打開pusher_test的同時，pusher顯示了訊息Hello world。
+
+延伸閱讀[Security](https://www.yiiframework.com/doc/guide/2.0/en/security-overview)

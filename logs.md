@@ -4,6 +4,10 @@ layout: page
 permalink: "/logs/"
 ---
 
+### 2023-01-08
+---
+**Added**
+* [Yii2 basic login auth with database](https://jhuei.com/code/2023/01/08/yii2-basic-auth-login.html) / Post
 ### 2022-04-30
 ---
 **Added**
