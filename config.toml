@@ -528,10 +528,10 @@ hideReadingTime = false
 
   #  Sponsor config
   [params.sponsor]
-    enable = false
-    bio = "If you find this post helpful, please consider sponsoring."
-    link = "https://www.buymeacoffee.com" # The link to your sponsor page
-    custom = "" # Custom HTML button
+    enable = true
+    bio = ""
+    link = "https://www.buymeacoffee.com/jhuei" # The link to your sponsor page
+    custom = '' # Custom HTML button
 
   #  TypeIt config
   [params.typeit]
