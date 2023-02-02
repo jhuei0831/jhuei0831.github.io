@@ -563,10 +563,10 @@ hideReadingTime = false
 
   #  Analytics config
   [params.analytics]
-    enable = false
+    enable = true
     # Google Analytics
     [params.analytics.google]
-      id = ""
+      id = "UA-163825738-1"
       # whether to anonymize IP
       anonymizeIP = true
     # Fathom Analytics
