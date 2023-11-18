@@ -528,7 +528,7 @@ hideReadingTime = false
 
   #  Sponsor config
   [params.sponsor]
-    enable = true
+    enable = false
     bio = ""
     link = "https://www.buymeacoffee.com/jhuei" # The link to your sponsor page
     custom = '' # Custom HTML button
