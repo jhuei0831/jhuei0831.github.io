@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "GenSenRoundedTW-M";
+    src: url("../fonts/GenSenRoundedTW-M.ttf") format("truetype"),
+         url("../fonts/GenSenRoundedTW-M.woff") format("woff"),
+         url("../fonts/GenSenRoundedTW-M.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Cubic_11_1.100_R";
+    src: url("../fonts/Cubic_11_1.100_R.ttf") format("truetype"),
+         url("../fonts/Cubic_11_1.100_R.woff") format("woff"),
+         url("../fonts/Cubic_11_1.100_R.woff2") format("woff2");
+}
+
+body {
+    font-family: "Cubic_11_1.100_R";
+}
