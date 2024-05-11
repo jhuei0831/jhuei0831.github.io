@@ -12,6 +12,11 @@
          url("../fonts/Cubic_11_1.100_R.woff2") format("woff2");
 }
 
+@font-face {
+    font-family: "NotoSansTC-M";
+    src: url("../fonts/NotoSansTC-Medium.ttf") format("truetype");
+}
+
 body {
-    font-family: "Cubic_11_1.100_R";
+    font-family: "NotoSansTC-M";
 }
