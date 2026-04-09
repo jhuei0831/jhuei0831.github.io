@@ -1,6 +1,6 @@
 media: media
 content:
-  - name: pages
+  - name: posts
     label: Pages
     type: collection
     path: docs
