@@ -1,9 +1,9 @@
 media: media
 content:
   - name: posts
-    label: Pages
+    label: Posts
     type: collection
-    path: docs
+    path: content/posts
     fields:
       - name: title
         type: string
