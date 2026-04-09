@@ -1,9 +1,18 @@
 media: media
 content:
   - name: posts
-    label: Posts
+    label: 文章
     type: collection
     path: content/posts
+    fields:
+      - name: title
+        type: string
+      - name: body
+        type: rich-text
+  - name: about
+    label: 關於我們
+    type: collection
+    path: content/about
     fields:
       - name: title
         type: string
